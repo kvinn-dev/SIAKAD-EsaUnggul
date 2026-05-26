@@ -1,0 +1,6 @@
+{
+  "name": "SIAKAD Esa Unggul",
+  "description": "Sistem Informasi Akademik modern untuk mahasiswa Universitas Esa Unggul, dilengkapi dengan fitur perbandingan performa REST API vs SOAP API terintegrasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
