@@ -51,7 +51,7 @@ Dashboard SIAKAD dirancang mengikuti arsitektur **Service-Oriented Architecture 
 
 ---
 
-## 3. Catatan Perbandingan Kinerja REST API vs SOAP API
+## 2. Catatan Perbandingan Kinerja REST API vs SOAP API
 
 Hasil studi komparasi yang dikumpulkan oleh prototype ini mendapati kesimpulan fundamental sebagai berikut:
 
@@ -67,7 +67,7 @@ Hasil studi komparasi yang dikumpulkan oleh prototype ini mendapati kesimpulan f
 
 ---
 
-## 4. Panduan Pengujian API Menggunakan Postman / SoapUI
+## 3. Panduan Pengujian API Menggunakan Postman / SoapUI
 
 Seluruh rute backend SIAKAD berjalan di port 3000. Dokumen kontrak **WSDL** SOAP dinamis dapat diunduh di alamat: `http://localhost:3000/soap/wsdl`.
 
@@ -179,7 +179,7 @@ Pemanggilan SOAP API mewajibkan pengiriman dokumen XML bermodel SOAP Envelope me
 
 ---
 
-## 5. Cara Menjalankan Project Secara Lokal
+## 4. Cara Menjalankan Project Secara Lokal
 
 Untuk menjalankan prototype full-stack akademik ini, ikuti perintah konsol berikut:
 
