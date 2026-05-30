@@ -88,7 +88,7 @@ Seluruh rute backend SIAKAD berjalan di port 3000. Dokumen kontrak **WSDL** SOAP
 {
   "success": true,
   "requires_otp": true,
-  "userId": "usr_kevin",
+  "userId": "usr_mhs",
   "email": "mahasiswa@esaunggul.ac.id",
   "message": "Kode OTP telah dikirim ke email terdaftar Anda."
 }
@@ -133,7 +133,7 @@ Pemanggilan SOAP API mewajibkan pengiriman dokumen XML bermodel SOAP Envelope me
    <soapenv:Header/>
    <soapenv:Body>
       <sia:GetStudentProfileRequest>
-         <sia:nim>20240801273</sia:nim>
+         <sia:nim>20240801XXX</sia:nim>
       </sia:GetStudentProfileRequest>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -147,9 +147,9 @@ Pemanggilan SOAP API mewajibkan pengiriman dokumen XML bermodel SOAP Envelope me
       <sia:GetStudentProfileResponse>
          <sia:status>SUCCESS</sia:status>
          <sia:profile>
-            <sia:id>usr_kevin</sia:id>
-            <sia:nim>20240801273</sia:nim>
-            <sia:name>Kevin Yulian Pamungkas</sia:name>
+            <sia:id>usr_mhs</sia:id>
+            <sia:nim>20240801XXX</sia:nim>
+            <sia:name>Nama Mahasiswa</sia:name>
             <sia:email>mahasiswa@esaunggul.ac.id</sia:email>
             <sia:faculty>Fasikom (Fakultas Ilmu Komputer)</sia:faculty>
             <sia:study_program>Teknik Informatika</sia:study_program>
@@ -171,7 +171,7 @@ Pemanggilan SOAP API mewajibkan pengiriman dokumen XML bermodel SOAP Envelope me
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sia="http://esaunggul.ac.id/siakad">
    <soapenv:Body>
       <sia:GetStudentGradesRequest>
-         <sia:nim>20240801273</sia:nim>
+         <sia:nim>20240801XXX</sia:nim>
       </sia:GetStudentGradesRequest>
    </soapenv:Body>
 </soapenv:Envelope>
@@ -202,4 +202,3 @@ Untuk menjalankan prototype full-stack akademik ini, ikuti perintah konsol berik
    ```
 
 ---
-**Dibuat oleh Kevin Yulian Pamungkas untuk Riset Komparatif Middleware Enterprise Service Bus Universitas Esa Unggul - 2026.**
