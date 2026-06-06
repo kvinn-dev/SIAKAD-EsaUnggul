@@ -53,14 +53,14 @@ function trackRestPerformance(endpoint: string) {
 }
 
 // Simple authentication token verification (Session simulation)
-// In a standard client-server app, we use JWT. For this academic project, we use a bearer token model like `bearer usr_kevin_secret`.
+// In a standard client-server app, we use JWT. For this academic project, we use a bearer token model like `bearer usr_mhs_secret`.
 function authenticate(req: Request, res: Response, next: NextFunction) {
   const authHeader = req.headers.authorization;
   const db = DatabaseService.get();
   
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    // If testing or previewing, fallback to usr_kevin for ease of use
-    const fallbackUser = db.users.find(u => u.id === 'usr_kevin');
+    // If testing or previewing, fallback to usr_mhs for ease of use
+    const fallbackUser = db.users.find(u => u.id === 'usr_mhs');
     if (fallbackUser) {
       (req as any).user = fallbackUser;
       return next();
@@ -869,10 +869,10 @@ router.post('/soap', (req: Request, res: Response) => {
   // Extract NIM parameter from soap envelope via typical regex
   // E.g. <sia:nim>20240801273</sia:nim>
   const nimMatch = xmlBody.match(/<(?:sia:)?nim>([^<]+)<\/(?:sia:)?nim>/);
-  const nimValue = nimMatch ? nimMatch[1].trim() : '20240801273'; // Default to Kevin's NIM if unspecified
+  const nimValue = nimMatch ? nimMatch[1].trim() : '20240801273'; // Default to Mahasiswa's NIM if unspecified
 
   // Grab the corresponding user
-  const user = db.users.find(u => u.nim === nimValue) || db.users.find(u => u.id === 'usr_kevin');
+  const user = db.users.find(u => u.nim === nimValue) || db.users.find(u => u.id === 'usr_mhs');
   let responseXml = '';
   let status = 200;
 
@@ -1174,7 +1174,7 @@ router.get('/performance/comparison', (req: Request, res: Response) => {
 router.post('/performance/trigger-test', (req: Request, res: Response) => {
   const { type, action } = req.body;
   const db = DatabaseService.get();
-  const user = db.users.find(u => u.id === 'usr_kevin') || db.users[0];
+  const user = db.users.find(u => u.id === 'usr_mhs') || db.users[0];
   
   const start = process.hrtime();
   const now = new Date().toISOString();

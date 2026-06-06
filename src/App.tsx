@@ -80,7 +80,8 @@ export default function App() {
   const [page, setPage] = useState<'login' | 'register' | 'otp' | 'forgot_password' | 'dashboard'>(() => {
     try {
       const savedToken = localStorage.getItem('siakad_token');
-      return savedToken ? 'dashboard' : 'login';
+      if (savedToken) return 'dashboard';
+      return (sessionStorage.getItem('siakad_page') as any) || 'login';
     } catch {
       return 'login';
     }
@@ -121,9 +122,23 @@ export default function App() {
   const [resetForm, setResetForm] = useState({ otp: '', password: '', confirmPassword: '' });
 
   // OTP routing state
-  const [otpUserId, setOtpUserId] = useState<string>('');
-  const [otpEmail, setOtpEmail] = useState<string>('');
-  const [otpPurpose, setOtpPurpose] = useState<'login' | 'register' | 'forgot'>('login');
+  const [otpUserId, setOtpUserId] = useState<string>(() => sessionStorage.getItem('siakad_otpUserId') || '');
+  const [otpEmail, setOtpEmail] = useState<string>(() => sessionStorage.getItem('siakad_otpEmail') || '');
+  const [otpPurpose, setOtpPurpose] = useState<'login' | 'register' | 'forgot'>(() => (sessionStorage.getItem('siakad_otpPurpose') as any) || 'login');
+
+  // Persist Page & OTP State to survive Vite HMR reloads
+  useEffect(() => {
+    sessionStorage.setItem('siakad_page', page);
+  }, [page]);
+  useEffect(() => {
+    sessionStorage.setItem('siakad_otpUserId', otpUserId);
+  }, [otpUserId]);
+  useEffect(() => {
+    sessionStorage.setItem('siakad_otpEmail', otpEmail);
+  }, [otpEmail]);
+  useEffect(() => {
+    sessionStorage.setItem('siakad_otpPurpose', otpPurpose);
+  }, [otpPurpose]);
 
   // Academic Core States
   const [dashboardData, setDashboardData] = useState<any>(null);
@@ -137,10 +152,22 @@ export default function App() {
 
   // Simulation / Developer Panels state
   const [gmailInbox, setGmailInbox] = useState<any[]>([]);
-  const [showDevPanel, setShowDevPanel] = useState<boolean>(false);
-  const [isDevStreamExpanded, setIsDevStreamExpanded] = useState<boolean>(true);
+  const [showDevPanel, setShowDevPanel] = useState<boolean>(() => {
+    return sessionStorage.getItem('siakad_showDevPanel') === 'true';
+  });
+  const [isDevStreamExpanded, setIsDevStreamExpanded] = useState<boolean>(() => {
+    const saved = sessionStorage.getItem('siakad_isDevStreamExpanded');
+    return saved !== null ? saved === 'true' : true;
+  });
   const [useWso2Gateway, setUseWso2Gateway] = useState<boolean>(true);
   const [esbLogs, setEsbLogs] = useState<string[]>([]);
+
+  useEffect(() => {
+    sessionStorage.setItem('siakad_showDevPanel', String(showDevPanel));
+  }, [showDevPanel]);
+  useEffect(() => {
+    sessionStorage.setItem('siakad_isDevStreamExpanded', String(isDevStreamExpanded));
+  }, [isDevStreamExpanded]);
 
   // Settings profile form
   const [profileForm, setProfileForm] = useState({
@@ -406,6 +433,10 @@ export default function App() {
         setToken(data.token);
         setUser(data.user);
         setPage('dashboard');
+        sessionStorage.removeItem('siakad_page');
+        sessionStorage.removeItem('siakad_otpUserId');
+        sessionStorage.removeItem('siakad_otpEmail');
+        sessionStorage.removeItem('siakad_otpPurpose');
         triggerAlert('success', 'Akun berhasil diverifikasi. Selamat datang!');
         addEsbLog(`OTP verified. Activated session for ${data.user.name}.`);
       } else {
@@ -831,6 +862,10 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                     setToken(null);
                     setUser(null);
                     setPage('login');
+                  sessionStorage.removeItem('siakad_page');
+                  sessionStorage.removeItem('siakad_otpUserId');
+                  sessionStorage.removeItem('siakad_otpEmail');
+                  sessionStorage.removeItem('siakad_otpPurpose');
                     triggerAlert('success', 'Berhasil logout dari sistem.');
                     addEsbLog(`Cleared credentials. Routed to auth.`);
                   }}
@@ -1067,7 +1102,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                         required
                         value={registerForm.name}
                         onChange={(e) => setRegisterForm(prev => ({ ...prev, name: e.target.value }))}
-                        placeholder="Contoh: Kevin Yulian Pamungkas"
+                        placeholder="Contoh: John Doe"
                         className="w-full px-4 py-2 text-sm rounded-xl border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-sky-400 transition-all"
                       />
                     </div>
@@ -1220,7 +1255,13 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                       </button>
                     </div>
                     <button
-                      onClick={() => setPage('login')}
+                onClick={() => {
+                  setPage('login');
+                  sessionStorage.removeItem('siakad_page');
+                  sessionStorage.removeItem('siakad_otpUserId');
+                  sessionStorage.removeItem('siakad_otpEmail');
+                  sessionStorage.removeItem('siakad_otpPurpose');
+                }}
                       className="text-xs text-slate-400 hover:text-slate-600 underline"
                     >
                       Batal, Kembali Ke Login
@@ -1297,7 +1338,13 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                       <div className="text-center pt-3">
                         <button
                           type="button"
-                          onClick={() => setPage('login')}
+                  onClick={() => {
+                    setPage('login');
+                    sessionStorage.removeItem('siakad_page');
+                    sessionStorage.removeItem('siakad_otpUserId');
+                    sessionStorage.removeItem('siakad_otpEmail');
+                    sessionStorage.removeItem('siakad_otpPurpose');
+                  }}
                           className="text-xs text-slate-400 hover:text-slate-600 underline"
                         >
                           Batal, Kembali Ke Login
@@ -2488,7 +2535,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
           </div>
           <div className="text-[10px] text-slate-400 text-right">
             <p>Universitas Esa Unggul - Fakultas Ilmu Komputer</p>
-            <p className="mt-0.5">&copy; 2026 Kevin Yulian Pamungkas. All Rights Reserved</p>
+            <p className="mt-0.5">&copy; 2026. All Rights Reserved</p>
           </div>
         </div>
       </footer>

@@ -212,9 +212,9 @@ export class DatabaseService {
 
     // 1. Core Default User (Mahasiswa)
     const user1: User = {
-      id: 'usr_kevin',
-      name: 'Kevin Yulian Pamungkas',
-      nim: '20240801273',
+      id: 'usr_mhs',
+      name: 'John Doe',
+      nim: '20240801001',
       email: 'mahasiswa@esaunggul.ac.id',
       passwordHash: hashPassword('password123'),
       phone: '081234567890',
@@ -227,8 +227,8 @@ export class DatabaseService {
 
     // 2. Student Profile
     const profile1: StudentProfile = {
-      id: 'prof_kevin',
-      user_id: 'usr_kevin',
+      id: 'prof_mhs',
+      user_id: 'usr_mhs',
       faculty: 'Fasikom (Fakultas Ilmu Komputer)',
       study_program: 'Teknik Informatika',
       semester: 4,
@@ -305,7 +305,7 @@ export class DatabaseService {
     // 4. Student Courses mappings
     const mockStudentCourses: StudentCourse[] = mockCourses.map((c, idx) => ({
       id: `sc_${idx + 1}`,
-      user_id: 'usr_kevin',
+      user_id: 'usr_mhs',
       course_id: c.id,
       academic_year: '2025/2026',
       semester: 4,
@@ -394,7 +394,7 @@ export class DatabaseService {
 
         mockAttendances.push({
           id: `att_${crs.id}_${meetNum}`,
-          user_id: 'usr_kevin',
+          user_id: 'usr_mhs',
           course_id: crs.id,
           meeting_number: meetNum,
           status,
@@ -410,7 +410,7 @@ export class DatabaseService {
       {
         id: 'grd_1',
         course_id: 'crs_1',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         assignment_score: 88,
         quiz_score: 85,
         midterm_score: 82,
@@ -423,7 +423,7 @@ export class DatabaseService {
       {
         id: 'grd_2',
         course_id: 'crs_2',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         assignment_score: 92,
         quiz_score: 90,
         midterm_score: 88,
@@ -436,7 +436,7 @@ export class DatabaseService {
       {
         id: 'grd_3',
         course_id: 'crs_3',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         assignment_score: 78,
         quiz_score: 80,
         midterm_score: 75,
@@ -449,7 +449,7 @@ export class DatabaseService {
       {
         id: 'grd_4',
         course_id: 'crs_4',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         assignment_score: 85,
         quiz_score: 82,
         midterm_score: 80,
@@ -462,7 +462,7 @@ export class DatabaseService {
       {
         id: 'grd_5',
         course_id: 'crs_5',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         assignment_score: 95,
         quiz_score: 92,
         midterm_score: 90,
@@ -475,7 +475,7 @@ export class DatabaseService {
       {
         id: 'grd_6',
         course_id: 'crs_6',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         assignment_score: 70,
         quiz_score: 75,
         midterm_score: 70,
@@ -494,7 +494,7 @@ export class DatabaseService {
     const mockPayments: Payment[] = [
       {
         id: 'pay_1',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         invoice_code: 'INV202640101',
         payment_type: 'BPP',
         amount: 8500000,
@@ -507,7 +507,7 @@ export class DatabaseService {
       },
       {
         id: 'pay_2',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         invoice_code: 'INV202640102',
         payment_type: 'SKS',
         amount: 5400000,
@@ -520,7 +520,7 @@ export class DatabaseService {
       },
       {
         id: 'pay_3',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         invoice_code: 'INV202640103',
         payment_type: 'Praktikum',
         amount: 1500000,
@@ -533,7 +533,7 @@ export class DatabaseService {
       },
       {
         id: 'pay_4',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         invoice_code: 'INV202640104',
         payment_type: 'UTS',
         amount: 1200000,
@@ -550,7 +550,7 @@ export class DatabaseService {
     const mockNotifications: Notification[] = [
       {
         id: 'not_1',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         title: 'Pengumuman Pengisian KRS Semester Antara',
         message: 'Pengisian KRS untuk Semester Antara akan dibuka mulai tanggal 1 Juni 2026 s.d. 15 Juni 2026. Harap hubungi dosen wali.',
         type: 'pengumuman',
@@ -560,7 +560,7 @@ export class DatabaseService {
       },
       {
         id: 'not_2',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         title: 'Tagihan Pembayaran Praktikum',
         message: 'Tagihan Pembayaran Praktikum sebesar Rp1.500.000 mendekati tanggal jatuh tempo 30 Mei 2026. Harap segera melakukan pembayaran.',
         type: 'pembayaran',
@@ -570,7 +570,7 @@ export class DatabaseService {
       },
       {
         id: 'not_3',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         title: 'Nilai UTS Telah Dirilis',
         message: 'Dosen Rita Wahyuni telah merilis nilai UTS untuk mata kuliah Arsitektur Berorientasi Layanan (SOA) dengan nilai: 88.',
         type: 'nilai',
@@ -580,7 +580,7 @@ export class DatabaseService {
       },
       {
         id: 'not_4',
-        user_id: 'usr_kevin',
+        user_id: 'usr_mhs',
         title: 'Absensi Terhitung Hadir',
         message: 'Absensi Anda pada pertemuan ke-12 mata kuliah Pemrograman Web Enterprise telah terverifikasi sebagai Hadir.',
         type: 'absensi',

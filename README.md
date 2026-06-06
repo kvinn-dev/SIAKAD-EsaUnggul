@@ -97,7 +97,7 @@ Seluruh rute backend SIAKAD berjalan di port 3000. Dokumen kontrak **WSDL** SOAP
 #### 2. Dapatkan Rencana Studi Mahasiswa
 * **Method**: `GET`
 * **URL**: `http://localhost:3000/api/courses`
-* **Header**: `Authorization: Bearer token_usr_kevin`
+* **Header**: `Authorization: Bearer token_usr_mhs`
 * **Response**:
 ```json
 {
