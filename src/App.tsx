@@ -39,7 +39,8 @@ import {
   UserCheck,
   ChevronDown,
   ChevronUp,
-  ChevronRight
+  ChevronRight,
+ArrowDown
 } from 'lucide-react';
 import {
   AreaChart,
@@ -80,8 +81,7 @@ export default function App() {
   const [page, setPage] = useState<'login' | 'register' | 'otp' | 'forgot_password' | 'dashboard'>(() => {
     try {
       const savedToken = localStorage.getItem('siakad_token');
-      if (savedToken) return 'dashboard';
-      return (sessionStorage.getItem('siakad_page') as any) || 'login';
+      return savedToken ? 'dashboard' : 'login';
     } catch {
       return 'login';
     }
@@ -122,23 +122,9 @@ export default function App() {
   const [resetForm, setResetForm] = useState({ otp: '', password: '', confirmPassword: '' });
 
   // OTP routing state
-  const [otpUserId, setOtpUserId] = useState<string>(() => sessionStorage.getItem('siakad_otpUserId') || '');
-  const [otpEmail, setOtpEmail] = useState<string>(() => sessionStorage.getItem('siakad_otpEmail') || '');
-  const [otpPurpose, setOtpPurpose] = useState<'login' | 'register' | 'forgot'>(() => (sessionStorage.getItem('siakad_otpPurpose') as any) || 'login');
-
-  // Persist Page & OTP State to survive Vite HMR reloads
-  useEffect(() => {
-    sessionStorage.setItem('siakad_page', page);
-  }, [page]);
-  useEffect(() => {
-    sessionStorage.setItem('siakad_otpUserId', otpUserId);
-  }, [otpUserId]);
-  useEffect(() => {
-    sessionStorage.setItem('siakad_otpEmail', otpEmail);
-  }, [otpEmail]);
-  useEffect(() => {
-    sessionStorage.setItem('siakad_otpPurpose', otpPurpose);
-  }, [otpPurpose]);
+  const [otpUserId, setOtpUserId] = useState<string>('');
+  const [otpEmail, setOtpEmail] = useState<string>('');
+  const [otpPurpose, setOtpPurpose] = useState<'login' | 'register' | 'forgot'>('login');
 
   // Academic Core States
   const [dashboardData, setDashboardData] = useState<any>(null);
@@ -152,22 +138,10 @@ export default function App() {
 
   // Simulation / Developer Panels state
   const [gmailInbox, setGmailInbox] = useState<any[]>([]);
-  const [showDevPanel, setShowDevPanel] = useState<boolean>(() => {
-    return sessionStorage.getItem('siakad_showDevPanel') === 'true';
-  });
-  const [isDevStreamExpanded, setIsDevStreamExpanded] = useState<boolean>(() => {
-    const saved = sessionStorage.getItem('siakad_isDevStreamExpanded');
-    return saved !== null ? saved === 'true' : true;
-  });
+  const [showDevPanel, setShowDevPanel] = useState<boolean>(false);
+  const [isDevStreamExpanded, setIsDevStreamExpanded] = useState<boolean>(true);
   const [useWso2Gateway, setUseWso2Gateway] = useState<boolean>(true);
   const [esbLogs, setEsbLogs] = useState<string[]>([]);
-
-  useEffect(() => {
-    sessionStorage.setItem('siakad_showDevPanel', String(showDevPanel));
-  }, [showDevPanel]);
-  useEffect(() => {
-    sessionStorage.setItem('siakad_isDevStreamExpanded', String(isDevStreamExpanded));
-  }, [isDevStreamExpanded]);
 
   // Settings profile form
   const [profileForm, setProfileForm] = useState({
@@ -186,6 +160,19 @@ export default function App() {
     soap?: { time: number; size: number; format: string; raw: string };
   }>({});
   const [performanceHistory, setPerformanceHistory] = useState<any[]>([]);
+
+  // Security Simulation Playground states
+  const [selectedAttack, setSelectedAttack] = useState<'DDOS' | 'SQLI' | 'BYPASS' | 'XMLBOMB'>('DDOS');
+  const [simulatingSecurity, setSimulatingSecurity] = useState<boolean>(false);
+  const [securitySimResult, setSecuritySimResult] = useState<{
+    attackType: string;
+    useWso2: boolean;
+    httpStatus: number;
+    responseData: any;
+    traceLogs: string[];
+    wso2PolicyXml: string;
+    mitigationStep: string;
+  } | null>(null);
 
   // Feedback notifications (Alert banners)
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
@@ -209,10 +196,15 @@ export default function App() {
     const interval = setInterval(() => {
       if (token || otpUserId) {
         let headers: any = {};
-        if (token) headers['Authorization'] = `Bearer ${token}`;
-
+        
+        // Pasang kredensial otorisasi: gunakan token utama jika ada, 
+        // atau gunakan otpUserId sebagai token sementara untuk mem-bypass 401 saat fase OTP
+        headers['Authorization'] = `Bearer ${token || otpUserId}`;
+        
+        const endpoint = token ? '/api/notifications' : `/api/notifications?userId=${otpUserId}`;
+        
         // Fetch all notifications from API to check for OTP logs
-        fetch('/api/notifications', { headers })
+        fetch(endpoint, { headers })
           .then(r => r.json())
           .then(res => {
             if (res.success && res.data) {
@@ -433,10 +425,6 @@ export default function App() {
         setToken(data.token);
         setUser(data.user);
         setPage('dashboard');
-        sessionStorage.removeItem('siakad_page');
-        sessionStorage.removeItem('siakad_otpUserId');
-        sessionStorage.removeItem('siakad_otpEmail');
-        sessionStorage.removeItem('siakad_otpPurpose');
         triggerAlert('success', 'Akun berhasil diverifikasi. Selamat datang!');
         addEsbLog(`OTP verified. Activated session for ${data.user.name}.`);
       } else {
@@ -706,6 +694,47 @@ export default function App() {
     } catch (e) { }
   };
 
+  const handleTriggerSecuritySimulation = async (attackType: string, useWso2: boolean) => {
+    setSimulatingSecurity(true);
+    addEsbLog(`Launching simulated ${attackType} vector targeting SIAKAD endpoint via ${useWso2 ? 'WSO2 Gateway' : 'Direct API'}`);
+
+    try {
+      const response = await fetch('/api/security/simulate-attack', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ attackType, useWso2 })
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSecuritySimResult({
+          attackType: data.attackType,
+          useWso2: data.useWso2,
+          httpStatus: data.httpStatus,
+          responseData: data.responseData,
+          traceLogs: data.traceLogs,
+          wso2PolicyXml: data.wso2PolicyXml,
+          mitigationStep: data.mitigationStep
+        });
+
+        // Push relevant logs to ESB trace log in real-time
+        data.traceLogs.forEach((logStr: string) => {
+          addEsbLog(`[SEC-RULE-VAL] ${logStr}`);
+        });
+
+        if (useWso2) {
+          triggerAlert('success', `Simulasi ${attackType}: WSO2 memblokir serangan! Backend terlindungi.`);
+        } else {
+          // If Direct API, it fails or leaks data
+          triggerAlert('error', `Simulasi ${attackType}: Direct API Rentan! Data bocor atau server crash.`);
+        }
+      }
+    } catch (err) {
+      triggerAlert('error', 'Gagal melancarkan simulasi serangan keamanan.');
+    } finally {
+      setSimulatingSecurity(false);
+    }
+  };
+
   // Auto layout values calculations
   const calculateGPAValue = () => {
     if (!grades || grades.length === 0) return 3.48; // dummy fallback
@@ -862,10 +891,6 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                     setToken(null);
                     setUser(null);
                     setPage('login');
-                  sessionStorage.removeItem('siakad_page');
-                  sessionStorage.removeItem('siakad_otpUserId');
-                  sessionStorage.removeItem('siakad_otpEmail');
-                  sessionStorage.removeItem('siakad_otpPurpose');
                     triggerAlert('success', 'Berhasil logout dari sistem.');
                     addEsbLog(`Cleared credentials. Routed to auth.`);
                   }}
@@ -1102,7 +1127,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                         required
                         value={registerForm.name}
                         onChange={(e) => setRegisterForm(prev => ({ ...prev, name: e.target.value }))}
-                        placeholder="Contoh: John Doe"
+                        placeholder="Contoh: Kevin Yulian Pamungkas"
                         className="w-full px-4 py-2 text-sm rounded-xl border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-sky-400 transition-all"
                       />
                     </div>
@@ -1255,13 +1280,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                       </button>
                     </div>
                     <button
-                onClick={() => {
-                  setPage('login');
-                  sessionStorage.removeItem('siakad_page');
-                  sessionStorage.removeItem('siakad_otpUserId');
-                  sessionStorage.removeItem('siakad_otpEmail');
-                  sessionStorage.removeItem('siakad_otpPurpose');
-                }}
+                      onClick={() => setPage('login')}
                       className="text-xs text-slate-400 hover:text-slate-600 underline"
                     >
                       Batal, Kembali Ke Login
@@ -1338,13 +1357,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                       <div className="text-center pt-3">
                         <button
                           type="button"
-                  onClick={() => {
-                    setPage('login');
-                    sessionStorage.removeItem('siakad_page');
-                    sessionStorage.removeItem('siakad_otpUserId');
-                    sessionStorage.removeItem('siakad_otpEmail');
-                    sessionStorage.removeItem('siakad_otpPurpose');
-                  }}
+                          onClick={() => setPage('login')}
                           className="text-xs text-slate-400 hover:text-slate-600 underline"
                         >
                           Batal, Kembali Ke Login
@@ -2250,7 +2263,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                                 <span className="text-slate-500 mr-1">[{idx}]</span>
                                 <span className={
                                   logStr.includes('Fault') || logStr.includes('Failure')
-                                    ? 'text-rose-450'
+                                    ? 'text-rose-400'
                                     : logStr.includes('Proxy OK') || logStr.includes('verified')
                                       ? 'text-emerald-400'
                                       : 'text-sky-300'
@@ -2358,7 +2371,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
 
                         {benchResults.soap && (
                           <div className="space-y-2">
-                            <span className="text-amber-450 block text-xs">SOAP XML Response:</span>
+                            <span className="text-amber-400 block text-xs">SOAP XML Response:</span>
                             <pre className="p-3 bg-slate-950 rounded-xl overflow-x-auto max-h-60 text-[11px] leading-relaxed text-slate-300">
                               {benchResults.soap.raw}
                             </pre>
@@ -2368,6 +2381,288 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                       </div>
                     </div>
                   )}
+
+                  {/* HIGHLY REALISTIC API SECURITY COMPARISON PLAYGROUND */}
+                  <div className="bg-white rounded-2xl border border-slate-200 p-6 space-y-6 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="border-b border-slate-100 pb-5">
+                      <div className="flex items-start gap-3">
+                        <div className="p-2 bg-rose-50 border border-rose-100 rounded-xl text-rose-600">
+                          <Lock className="w-5 h-5 shrink-0" />
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-slate-800 font-display">Pusat Audit Keamanan & Proteksi API</h4>
+                          <p className="text-xs text-slate-500 leading-relaxed mt-1">
+                            Bandingkan ketahanan SIAKAD ESA UNGGUL terhadap ancaman keamanan siber ketika diakses secara langsung vs dilindungi oleh Gateway WSO2 API Manager.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Step 1: Select Attack Vector */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                      {/* Attack selectors */}
+                      <div className="lg:col-span-5 space-y-3">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Pilih Vektor Serangan Keamanan Siber:</span>
+                        </div>
+                        <div className="space-y-2.5">
+                          {[
+                            {
+                              key: 'DDOS',
+                              title: 'DDoS & Connection Flood',
+                              desc: 'Spamming ribuan request per detik untuk membanjiri kolam koneksi database SIAKAD.',
+                              icon: Activity,
+                              badge: 'Rate Limiting Protection',
+                              bgColor: 'from-red-50 to-red-50/30'
+                            },
+                            {
+                              key: 'SQLI',
+                              title: 'SQL Injection Extract',
+                              desc: "Menyisipkan parameter `' OR '1'='1' --` ke input NIM untuk mencuri seluruh data profil mahasiswa.",
+                              icon: FileText,
+                              badge: 'SQL Injection Threat Protect',
+                              bgColor: 'from-orange-50 to-orange-50/30'
+                            },
+                            {
+                              key: 'BYPASS',
+                              title: 'Expired JWT Token Bypass',
+                              desc: 'Mengakses endpoint statistik keuangan sensitif menggunakan token otorisasi yang sudah kedaluwarsa.',
+                              icon: User,
+                              badge: 'Unified JWT Validation',
+                              bgColor: 'from-amber-50 to-amber-50/30'
+                            },
+                            {
+                              key: 'XMLBOMB',
+                              title: 'XML Entity Expansion',
+                              desc: 'Billion Laughs attack: Mengirim entitas XML bersarang untuk membekukan RAM server SOAP Node.',
+                              icon: Cpu,
+                              badge: 'XML Threat Protection',
+                              bgColor: 'from-purple-50 to-purple-50/30'
+                            }
+                          ].map((item) => {
+                            const ItemIcon = item.icon;
+                            const isSelected = selectedAttack === item.key;
+                            return (
+                              <button
+                                key={item.key}
+                                onClick={() => {
+                                  setSelectedAttack(item.key);
+                                  setSecuritySimResult(null);
+                                }}
+                                className={`w-full text-left p-4 rounded-xl border transition-all duration-200 cursor-pointer ${isSelected
+                                  ? `bg-gradient-to-r ${item.bgColor} border-indigo-300 shadow-md ring-1 ring-indigo-200`
+                                  : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-sm'
+                                  }`}
+                              >
+                                <div className="flex items-start gap-3">
+                                  <div className={`p-2 rounded-lg shrink-0 transition-all ${isSelected ? 'bg-indigo-100 text-indigo-700' : 'bg-slate-100 text-slate-500'
+                                    }`}>
+                                    <ItemIcon className="w-4 h-4" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <div className="flex items-center justify-between flex-wrap gap-2">
+                                      <span className={`font-bold text-sm font-display ${isSelected ? 'text-indigo-900' : 'text-slate-800'}`}>
+                                        {item.title}
+                                      </span>
+                                      <span className={`text-[9px] font-mono tracking-wide px-2 py-0.5 rounded-md font-semibold ${isSelected
+                                        ? 'bg-indigo-100 text-indigo-700 border border-indigo-200'
+                                        : 'bg-slate-100 text-slate-500'
+                                        }`}>
+                                        {item.badge}
+                                      </span>
+                                    </div>
+                                    <p className={`text-[11px] leading-relaxed mt-1 font-sans ${isSelected ? 'text-slate-700' : 'text-slate-500'}`}>
+                                      {item.desc}
+                                    </p>
+                                  </div>
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Playground Arena */}
+                      <div className="lg:col-span-7 space-y-5">
+                        <div className="bg-slate-50 rounded-xl border border-slate-200 p-5">
+                          <div className="flex items-center gap-2 mb-4">
+                            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Arsitektur Jalur Aliran & Logika Perlindungan:</span>
+                          </div>
+
+                          {/* Attack Details Card */}
+                          <div className="p-4 bg-gradient-to-r from-red-50 to-red-50/30 border border-red-100 rounded-xl mb-5">
+                            <div className="flex items-center gap-2 text-red-800 font-bold font-display text-xs">
+                              <AlertTriangle className="w-4 h-4 text-red-500" />
+                              <span>Payload Simulasi Serangan:</span>
+                            </div>
+                            <pre className="mt-2 p-3 bg-slate-950 text-red-400 rounded-lg font-mono text-[10px] overflow-x-auto select-all border border-slate-800 leading-relaxed">
+                              {selectedAttack === 'DDOS' && 'HTTP GET /api/courses/list (Volume: 5.000 req/sec from IP 198.51.100.41)'}
+                              {selectedAttack === 'SQLI' && "HTTP POST /api/student/profile | Body: { nim: \"' OR '1'='1' --\" }"}
+                              {selectedAttack === 'BYPASS' && "HTTP GET /api/admin/financial-stats | Header: { Authorization: 'Bearer expired_token_sniffed_123' }"}
+                              {selectedAttack === 'XMLBOMB' && `SOAP POST /soap/courses | Body:\n<!DOCTYPE lolz [ <!ENTITY lol "lol"> <!ENTITY lol1 "&lol;&lol;&lol;..."> ]>\n<soapenv:Envelope>...&lol1;...</soapenv:Envelope>`}
+                            </pre>
+                          </div>
+
+                          {/* Dual comparative triggers */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                            <button
+                              onClick={() => handleTriggerSecuritySimulation(selectedAttack, false)}
+                              disabled={simulatingSecurity}
+                              className="w-full py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 border border-slate-600 text-white font-bold rounded-xl text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              <div className="h-2.5 w-2.5 rounded-full bg-rose-500 animate-pulse"></div>
+                              <span>Serang via Direct Core API</span>
+                            </button>
+
+                            <button
+                              onClick={() => handleTriggerSecuritySimulation(selectedAttack, true)}
+                              disabled={simulatingSecurity}
+                              className="w-full py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 border border-indigo-500 text-white font-bold rounded-xl text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              <ShieldCheck className="w-4 h-4 text-emerald-300" />
+                              <span>Serang via WSO2 Gateway</span>
+                            </button>
+                          </div>
+
+                          {/* Visualization Route Schema */}
+                          <div className="border border-slate-200 rounded-xl bg-white p-4">
+                            <div className="flex items-center gap-2 mb-4">
+                              <span className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Diagram Komparasi Aliran Data:</span>
+                            </div>
+
+                            <div className="flex flex-col gap-4">
+                              {/* Direct route schema */}
+                              <div className="p-4 border border-red-200 bg-gradient-to-br from-red-50/50 to-red-50/20 rounded-xl space-y-3">
+                                <div>
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <span className="font-bold text-sm text-red-700 block font-display">
+                                      Direct Route (Tanpa WSO2 Gateway)
+                                    </span>
+                                  </div>
+                                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                                    Koneksi publik langsung terakses ke web server utama SIAKAD Esa Unggul tanpa sensor atau mitigasi perimeter.
+                                  </p>
+                                </div>
+                                <div className="py-3 flex flex-wrap items-center justify-center gap-1.5 font-mono text-[10px] bg-red-100/40 rounded-lg border border-red-100/50 px-3">
+                                  <span className="font-semibold text-slate-700 bg-white/60 px-2 py-1 rounded">Attacker</span>
+                                  <ArrowRight className="w-3 h-3 text-red-400 shrink-0" />
+                                  <span className="font-bold text-red-800 bg-white/60 px-2 py-1 rounded">Web App Core</span>
+                                  <ArrowRight className="w-3 h-3 text-red-400 shrink-0" />
+                                  <span className="text-red-600 font-bold bg-red-100 px-2 py-1 rounded">Exposed / Crash!</span>
+                                </div>
+                              </div>
+
+                              {/* WSO2 gateway route schema */}
+                              <div className="p-4 border border-indigo-200 bg-gradient-to-br from-indigo-50/50 to-indigo-50/20 rounded-xl space-y-3">
+                                <div>
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <span className="font-bold text-sm text-indigo-700 block font-display">
+                                      Protected Route (Dilindungi WSO2)
+                                    </span>
+                                  </div>
+                                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                                    Request dicegat di batas perimeter oleh WSO2 Gateway. Diperiksa kebijakannya secara ketat sebelum diteruskan ke backend.
+                                  </p>
+                                </div>
+                                <div className="py-3 flex flex-wrap items-center justify-center gap-1.5 font-mono text-[10px] bg-slate-900 rounded-lg border border-slate-800 px-3">
+                                  <span className="text-indigo-300 bg-slate-800 px-2 py-1 rounded">Attacker</span>
+                                  <ArrowRight className="w-3 h-3 text-indigo-400 shrink-0" />
+                                  <span className="font-bold text-sky-400 bg-slate-800 px-2 py-1 rounded border border-slate-700">WSO2 Gateway</span>
+                                  <ArrowRight className="w-3 h-3 text-indigo-400 shrink-0" />
+                                  <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-1 rounded border border-emerald-900">Safe / Blocked</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                    {/* Results console - Display real outcomes of simulation */}
+                    {securitySimResult && (
+                      <div className="pt-5 border-t border-slate-200 text-xs space-y-5">
+                        {/* Status Bar */}
+                        <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-950 px-4 py-2.5 rounded-xl border border-slate-800 font-mono text-[11px]">
+                          <div className="flex items-center gap-3">
+                            <span className="text-slate-400">HTTP OUTCOME STATUS:</span>
+                            <span className={`font-bold px-2.5 py-1 rounded-md text-xs ${securitySimResult.httpStatus >= 400
+                              ? 'bg-red-950/80 text-red-400 border border-red-800'
+                              : 'bg-emerald-950/80 text-emerald-400 border border-emerald-800'
+                              }`}>
+                              {securitySimResult.httpStatus} {securitySimResult.httpStatus === 200 ? 'OK/Exploited' : securitySimResult.httpStatus === 429 ? 'Too Many Requests' : securitySimResult.httpStatus === 403 ? 'Forbidden / Pattern Matched' : securitySimResult.httpStatus === 401 ? 'Unauthorized / Bad JWT' : 'Service Unavailable/Crashed'}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-slate-400">ROUTING VIA:</span>
+                            <span className={`font-bold uppercase text-xs px-2 py-0.5 rounded ${securitySimResult.useWso2 ? 'text-indigo-400 bg-indigo-950/50' : 'text-rose-400 bg-rose-950/50'}`}>
+                              {securitySimResult.useWso2 ? '🛡️ WSO2 API Gateway' : '⚠️ Direct Server Endpoint'}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Interactive columns: JSON Result vs WSO2 policy XML */}
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                          {/* Live Payload Stream JSON */}
+                          <div className="lg:col-span-5 space-y-2">
+                            <div className="flex items-center gap-2">
+                              <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                                {securitySimResult.useWso2 ? '📦 WSO2 Gateway Payload Response:' : '⚠️ Direct API Leak / Payload Response:'}
+                              </span>
+                            </div>
+                            <pre className={`p-4 rounded-xl font-mono text-[10px] overflow-x-auto max-h-80 leading-relaxed border ${securitySimResult.useWso2
+                              ? 'bg-slate-950 text-indigo-300 border-slate-700'
+                              : 'bg-slate-950 text-amber-400 border-red-800'
+                              }`}>
+                              {JSON.stringify(securitySimResult.responseData, null, 2)}
+                            </pre>
+                            <div className="text-[10px] text-slate-400 leading-relaxed italic">
+                              {securitySimResult.useWso2
+                                ? '✔️ WSO2 Gateway melempar kesalahan standar (Fault XML/JSON) tanpa membebani thread database server SIAKAD.'
+                                : '⚠️ Hacker sukses mengekstrak informasi rahasia atau melumpuhkan server karena ketiadaan filter border.'}
+                            </div>
+                          </div>
+
+                          {/* Log tracer output */}
+                          <div className="lg:col-span-7 space-y-4">
+                            <div className="space-y-2">
+                              <div className="flex items-center gap-2">
+                                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">📋 Trace Audit Log Real-time:</span>
+                              </div>
+                              <div className="p-3 bg-slate-950 text-emerald-400 border border-slate-800 rounded-xl font-mono text-[10px] space-y-1.5 min-h-[120px] max-h-48 overflow-y-auto">
+                                {securitySimResult.traceLogs.map((logStr, idx) => (
+                                  <div key={idx} className="leading-relaxed">
+                                    <span className="text-slate-600 mr-2">››</span>
+                                    <span className="text-slate-300">{logStr}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* WSO2 Policy Highlight Box */}
+                            <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl space-y-3">
+                              <div className="flex items-center justify-between flex-wrap gap-2">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">⚙️ Konfigurasi Kebijakan WSO2 ESB:</span>
+                                </div>
+                                <span className="text-[8px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded uppercase font-semibold">Mediator Synapse Config</span>
+                              </div>
+                              <pre className="p-3 bg-slate-900 leading-relaxed text-slate-300 font-mono text-[9px] overflow-x-auto max-h-48 rounded-lg select-all border border-slate-800">
+                                {securitySimResult.wso2PolicyXml}
+                              </pre>
+                              <div className="text-[10px] text-slate-400 leading-relaxed pt-1 border-t border-slate-800">
+                                <span className="font-semibold text-slate-300">🛡️ Langkah Mitigasi:</span> {securitySimResult.mitigationStep}
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
                 </div>
               )}
@@ -2535,7 +2830,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
           </div>
           <div className="text-[10px] text-slate-400 text-right">
             <p>Universitas Esa Unggul - Fakultas Ilmu Komputer</p>
-            <p className="mt-0.5">&copy; 2026. All Rights Reserved</p>
+            <p className="mt-0.5">&copy; 2026 Kevin Yulian Pamungkas. All Rights Reserved</p>
           </div>
         </div>
       </footer>

@@ -53,14 +53,14 @@ function trackRestPerformance(endpoint: string) {
 }
 
 // Simple authentication token verification (Session simulation)
-// In a standard client-server app, we use JWT. For this academic project, we use a bearer token model like `bearer usr_mhs_secret`.
+// In a standard client-server app, we use JWT. For this academic project, we use a bearer token model like `bearer usr_kevin_secret`.
 function authenticate(req: Request, res: Response, next: NextFunction) {
   const authHeader = req.headers.authorization;
   const db = DatabaseService.get();
   
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    // If testing or previewing, fallback to usr_mhs for ease of use
-    const fallbackUser = db.users.find(u => u.id === 'usr_mhs');
+    // If testing or previewing, fallback to usr_kevin for ease of use
+    const fallbackUser = db.users.find(u => u.id === 'usr_kevin');
     if (fallbackUser) {
       (req as any).user = fallbackUser;
       return next();
@@ -869,10 +869,10 @@ router.post('/soap', (req: Request, res: Response) => {
   // Extract NIM parameter from soap envelope via typical regex
   // E.g. <sia:nim>20240801273</sia:nim>
   const nimMatch = xmlBody.match(/<(?:sia:)?nim>([^<]+)<\/(?:sia:)?nim>/);
-  const nimValue = nimMatch ? nimMatch[1].trim() : '20240801273'; // Default to Mahasiswa's NIM if unspecified
+  const nimValue = nimMatch ? nimMatch[1].trim() : '20240801273'; // Default to Kevin's NIM if unspecified
 
   // Grab the corresponding user
-  const user = db.users.find(u => u.nim === nimValue) || db.users.find(u => u.id === 'usr_mhs');
+  const user = db.users.find(u => u.nim === nimValue) || db.users.find(u => u.id === 'usr_kevin');
   let responseXml = '';
   let status = 200;
 
@@ -1174,7 +1174,7 @@ router.get('/performance/comparison', (req: Request, res: Response) => {
 router.post('/performance/trigger-test', (req: Request, res: Response) => {
   const { type, action } = req.body;
   const db = DatabaseService.get();
-  const user = db.users.find(u => u.id === 'usr_mhs') || db.users[0];
+  const user = db.users.find(u => u.id === 'usr_kevin') || db.users[0];
   
   const start = process.hrtime();
   const now = new Date().toISOString();
@@ -1293,6 +1293,223 @@ router.post('/performance/clear', (req: Request, res: Response) => {
   db.api_performance_logs = [];
   DatabaseService.save();
   return res.json({ success: true, message: 'Log riwayat pengujian berhasil dikosongkan.' });
+});
+
+// WSO2 vs Direct API Security Attack Simulator Endpoint
+router.post('/security/simulate-attack', (req: Request, res: Response) => {
+  const { attackType, useWso2 } = req.body;
+  const db = DatabaseService.get();
+  const timestamp = new Date().toISOString();
+
+  let httpStatus = 200;
+  let responseData: any = null;
+  let traceLogs: string[] = [];
+  let wso2PolicyXml = "";
+  let mitigationStep = "";
+
+  switch (attackType) {
+    case 'DDOS':
+      wso2PolicyXml = `<!-- WSO2 Throttle Policy Definition -->
+<wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp_tg="http://wso2.org/policy/throttle">
+    <wsp_tg:ThrottleAssertion>
+        <wsp_tg:PolicyKey>gov:/apimgt/applicationpolicies/GoldTier.xml</wsp_tg:PolicyKey>
+        <wsp_tg:ThrottleLimit>
+            <wsp_tg:MaxCount>20</wsp_tg:MaxCount>
+            <wsp_tg:UnitTime>60000</wsp_tg:UnitTime> <!-- Limit 20 req/min for Free/Student Tier -->
+        </wsp_tg:ThrottleLimit>
+    </wsp_tg:ThrottleAssertion>
+</wsp:Policy>`;
+      mitigationStep = "WSO2 Traffic Manager memblokir banjir request di batas luar (Gateway), sehingga CPU dan Koneksi Pool DB di SIAKAD Core tetap stabil sebesar < 10% CPU usage.";
+
+      if (!useWso2) {
+        httpStatus = 503;
+        responseData = {
+          error: "Service Unavailable",
+          message: "SIAKAD Database Connection Pool Exhausted. Express Server memory overhead: 96%. Request latency: > 15,000ms",
+          db_connections: "100/100 (LOCKED)",
+          system_status: "CRITICAL CRASH"
+        };
+        traceLogs = [
+          `[${timestamp}] incoming request - THREAD_POOL_FULL`,
+          `[${timestamp}] FATAL: [MySQL/PostgreSQL] Too many connections`,
+          `[${timestamp}] SIAKAD Core failed to respond to legitimate student transactions.`
+        ];
+      } else {
+        httpStatus = 429;
+        responseData = {
+          fault: {
+            code: 900800,
+            message: "Message threshold exceeded",
+            description: "You have exceeded your subscription quota limit of 20 requests per minute. Under protection filter: Rate Limiter Engine."
+          }
+        };
+        traceLogs = [
+          `[${timestamp}] info: Traffic Manager evaluated Subscription Tier limits`,
+          `[${timestamp}] WARNING: IP 198.51.100.41 triggered GoldTier threshold. Spammed 1,500 reqs/sec.`,
+          `[${timestamp}] ACTION: Injected 429 Too Many Requests response envelope. Blocked at Gateway layer. Core is safe.`
+        ];
+      }
+      break;
+
+    case 'SQLI':
+      wso2PolicyXml = `<!-- WSO2 Sequence Regex Threat Protection -->
+<sequence name="SQLInjectionMitigation" xmlns="http://ws.apache.org/ns/synapse">
+    <filter source="get-property('MessageID')" regex=".*(\\b(UNION|SELECT|INSERT|UPDATE|DELETE|DROP|OR|AND)\\b).*">
+        <then>
+            <payloadFactory media-type="json">
+                <format>{"fault": {"code": 403, "message": "Forbidden", "description": "SQL Injection pattern detected and sanitarily blocked"}}</format>
+            </payloadFactory>
+            <respond/>
+        </then>
+    </filter>
+</sequence>`;
+      mitigationStep = "Regex Threat Protector dan API Policy Mediator di WSO2 Gateway mendeteksi kata kunci SQL berbahaya pada URL / Payload Body dan memotong routing transaksi sebelum memicu error database.";
+
+      if (!useWso2) {
+        httpStatus = 200;
+        responseData = {
+          success: true,
+          status: "Vulnerabilities Leaked",
+          extracted_schema: "information_schema.tables",
+          dump_records: [
+            { nim: "20240801273", name: "Kevin Yulian", email: "student@esaunggul.ac.id", simulated_gpa: "4.00 (Injected)" },
+            { nim: "20240801274", name: "Admin Utama SIAKAD", password_hash: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi", balance_idr: "0" }
+          ]
+        };
+        traceLogs = [
+          `[${timestamp}] incoming query: select * from student_profiles where nim = '' OR '1'='1' --'`,
+          `[${timestamp}] EXPLOIT SUCCESSFUL: Query string processed directly without abstraction bounds/param binding. SQL returned full table leak.`
+        ];
+      } else {
+        httpStatus = 403;
+        responseData = {
+          fault: {
+            code: 403,
+            message: "Access Forbidden: Security Threat Intercepted",
+            description: "SQL Injection vector identified in input string properties. Transaction aborted by WSO2 Mediation Policy Engine."
+          }
+        };
+        traceLogs = [
+          `[${timestamp}] info: WSO2 Gateway Threat Protection Interceptor scanned Incoming Body payload`,
+          `[${timestamp}] CRITICAL: Malware pattern matched: ' OR '1'='1' --`,
+          `[${timestamp}] ACTION: Synapse filter 'SQLInjectionMitigation' matched. Terminating pipe. Returning HTTP 403.`
+        ];
+      }
+      break;
+
+    case 'BYPASS':
+      wso2PolicyXml = `<!-- WSO2 API Key or OAuth2 JWT Token Validation Policy -->
+<api xmlns="http://ws.apache.org/ns/synapse" name="SiakadSecureAPI" context="/api">
+    <handlers>
+        <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+            <property name="jwtValidationEnabled" value="true"/>
+            <property name="headerName" value="Authorization"/>
+        </handler>
+    </handlers>
+</api>`;
+      mitigationStep = "Autentikasi diisolasi di Gateway menggunakan OAuth 2.0 Token check. Gateway berinteraksi langsung dengan WSO2 Identity Server (IS) untuk mencabut, merevokasi, atau mencocokkan kredensial token sebelum diteruskan.";
+
+      if (!useWso2) {
+        httpStatus = 200;
+        responseData = {
+          success: true,
+          caution: "Token was EXPIRED or ABSENT, but direct endpoint does not validate it correctly across all distributed controller microservices",
+          data: {
+            confidential_finance_report: "Total tagihan belum terbayar se-kampus: Rp 14.500.000.000",
+            confidential_academic_report: "Kebocoran Data Kredensial Staff ESA UNGGUL"
+          }
+        };
+        traceLogs = [
+          `[${timestamp}] Admin Route accessed. Token invalid: 'expired_shitty_token_sniffed_123'`,
+          `[${timestamp}] WARNING: Internal service did not verify JWT signatures against the secret key. Request executed with zero verification.`
+        ];
+      } else {
+        httpStatus = 401;
+        responseData = {
+          fault: {
+            code: 900901,
+            message: "Invalid Credentials: JWT Token Signature Revoked",
+            description: "Access failure: Oauth Token has expired or lacks appropriate scopes. Authentication validated and terminated by Gateway Handlers."
+          }
+        };
+        traceLogs = [
+          `[${timestamp}] info: org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler evaluated request header`,
+          `[${timestamp}] EXPIRED: Found expired JWT. Introspection request to OAuth2 Server/Identity Server returned signature failure.`,
+          `[${timestamp}] ACTION: Emitted HTTP 401 to consumer. SIAKAD Admin controller was not bothered or loaded.`
+        ];
+      }
+      break;
+
+    case 'XMLBOMB':
+      wso2PolicyXml = `<!-- WSO2 XML Threat Protection Schema Validator Policy -->
+<property name="XML_THREAT_PROTECTION_CONFIG" scope="axis2" type="OM">
+    <XMLThreatProtection>
+        <EntityExpansionLimit>5</EntityExpansionLimit>
+        <ElementDepthLimit>10</ElementDepthLimit>
+        <AttributeCountLimit>20</AttributeCountLimit>
+    </XMLThreatProtection>
+</property>`;
+      mitigationStep = "Integrated XML Threat Protection Policy membatasi jumlah perluasan entitas XML (Entity Expansion Limit) dan kedalaman elemen (Element Depth Limit), menetralisir Billion Laughs attack seketika.";
+
+      if (!useWso2) {
+        httpStatus = 503;
+        responseData = {
+          error: "Service Unavailable / Out of Memory",
+          message: "Node XML SAX Parser crashed with EXCEPTION: Heap Out Of Memory. Thread pool is frozen.",
+          parser_crash: "Cannot process XML: <!ENTITY x0 'ESA' ><!ENTITY x1 '&x0;&x0;&x0;'..."
+        };
+        traceLogs = [
+          `[${timestamp}] SOAP POST payload: 60KB nested recursively (Billion Laughs payload)`,
+          `[${timestamp}] fatal: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory`,
+          `[${timestamp}] Thread is dead. Server is down. Legitimate student REST APIs are also experiencing timeout...`
+        ];
+      } else {
+        httpStatus = 400;
+        responseData = {
+          fault: {
+            code: 400,
+            message: "Bad Request: XML Threat Protection Voilation",
+            description: "XML payload parse rejected: Entity expansion size exceeded threat limits. Blocked by Gateway XML Parser."
+          }
+        };
+        traceLogs = [
+          `[${timestamp}] info: Synapse Parser intercepted SOAP content`,
+          `[${timestamp}] CRITICAL: Recursive entities expansion detected (>5 deep). Maximum entity expansion limit configuration violated.`,
+          `[${timestamp}] ACTION: Rejected raw payload before unmarshalling. Avoided resource allocation. Backend system is healthy.`
+        ];
+      }
+      break;
+
+    default:
+      httpStatus = 400;
+      responseData = { success: false, error: "Invalid attack selection" };
+  }
+
+  // Register in performance/events logs for WSO2 if active
+  if (useWso2) {
+    db.api_performance_logs.push({
+      id: `log_sec_${Date.now()}`,
+      api_type: 'SOAP',
+      endpoint: `/api/security/${attackType} (MITIGATED BY WSO2)`,
+      method: 'POST',
+      response_time_ms: 2.1,
+      status_code: httpStatus,
+      payload_size_bytes: useWso2 ? 312 : 12450,
+      created_at: timestamp
+    });
+    DatabaseService.save();
+  }
+
+  return res.json({
+    success: true,
+    attackType,
+    useWso2,
+    httpStatus,
+    responseData,
+    traceLogs,
+    wso2PolicyXml,
+    mitigationStep
+  });
 });
 
 export default router;

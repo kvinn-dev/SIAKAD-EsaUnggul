@@ -1,0 +1,3312 @@
+{
+  "users": [
+    {
+      "id": "usr_mhs",
+      "name": "John Doe",
+      "nim": "20240801001",
+      "email": "mahasiswa@esaunggul.ac.id",
+      "passwordHash": "hash_53ab39b7",
+      "phone": "081234567890",
+      "role": "mahasiswa",
+      "is_verified": true,
+      "two_fa_enabled": true,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "student_profiles": [
+    {
+      "id": "prof_mhs",
+      "user_id": "usr_mhs",
+      "faculty": "Fasikom (Fakultas Ilmu Komputer)",
+      "study_program": "Teknik Informatika",
+      "semester": 4,
+      "address": "Jl. Arjuna Utara No. 9, Kebon Jeruk, Jakarta Barat, 11510",
+      "photo": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "courses": [
+    {
+      "id": "crs_1",
+      "course_code": "INF201",
+      "course_name": "Pemrograman Web Enterprise",
+      "lecturer_name": "Ir. Hendra Kusuma, M.Kom.",
+      "credits": 3,
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "crs_2",
+      "course_code": "INF202",
+      "course_name": "Arsitektur Berorientasi Layanan (SOA)",
+      "lecturer_name": "Dr. Rita Wahyuni, M.T.",
+      "credits": 3,
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "crs_3",
+      "course_code": "INF203",
+      "course_name": "Sistem Manajemen Basis Data (RDBMS)",
+      "lecturer_name": "Budi Hartono, S.Kom., M.MSI.",
+      "credits": 4,
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "crs_4",
+      "course_code": "INF204",
+      "course_name": "Keamanan Jaringan & Informasi",
+      "lecturer_name": "Yogi Saputra, M.Sc.",
+      "credits": 3,
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "crs_5",
+      "course_code": "INF205",
+      "course_name": "Rekayasa Perangkat Lunak",
+      "lecturer_name": "Siti Aminah, M.T.",
+      "credits": 3,
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "crs_6",
+      "course_code": "MAT206",
+      "course_name": "Matematika Diskrit",
+      "lecturer_name": "Prof. Bambang Supardi, M.Si.",
+      "credits": 3,
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "student_courses": [
+    {
+      "id": "sc_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "academic_year": "2025/2026",
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sc_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "academic_year": "2025/2026",
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sc_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "academic_year": "2025/2026",
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sc_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "academic_year": "2025/2026",
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sc_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "academic_year": "2025/2026",
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sc_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "academic_year": "2025/2026",
+      "semester": 4,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "schedules": [
+    {
+      "id": "sch_1",
+      "course_id": "crs_1",
+      "day": "Senin",
+      "start_time": "08:00",
+      "end_time": "10:30",
+      "room": "Lab Komputer 304",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sch_2",
+      "course_id": "crs_2",
+      "day": "Selasa",
+      "start_time": "10:45",
+      "end_time": "13:15",
+      "room": "Ruang Teori 205",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sch_3",
+      "course_id": "crs_3",
+      "day": "Rabu",
+      "start_time": "08:00",
+      "end_time": "11:20",
+      "room": "Lab RDBMS 301",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sch_4",
+      "course_id": "crs_4",
+      "day": "Kamis",
+      "start_time": "13:30",
+      "end_time": "16:00",
+      "room": "Ruang Teori 402",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sch_5",
+      "course_id": "crs_5",
+      "day": "Jumat",
+      "start_time": "09:00",
+      "end_time": "11:30",
+      "room": "Ruang Teori 104",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "sch_6",
+      "course_id": "crs_6",
+      "day": "Sabtu",
+      "start_time": "08:00",
+      "end_time": "10:30",
+      "room": "PJJ Online Zoom",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "attendances": [
+    {
+      "id": "att_crs_1_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 1,
+      "status": "Hadir",
+      "date": "2026-03-07",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 2,
+      "status": "Hadir",
+      "date": "2026-03-14",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 3,
+      "status": "Hadir",
+      "date": "2026-03-21",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 4,
+      "status": "Hadir",
+      "date": "2026-03-28",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 5,
+      "status": "Hadir",
+      "date": "2026-04-04",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 6,
+      "status": "Hadir",
+      "date": "2026-04-11",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_7",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 7,
+      "status": "Hadir",
+      "date": "2026-04-18",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_8",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 8,
+      "status": "Hadir",
+      "date": "2026-04-25",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_9",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 9,
+      "status": "Izin",
+      "date": "2026-05-02",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_10",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 10,
+      "status": "Hadir",
+      "date": "2026-05-09",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_11",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 11,
+      "status": "Hadir",
+      "date": "2026-05-16",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_1_12",
+      "user_id": "usr_mhs",
+      "course_id": "crs_1",
+      "meeting_number": 12,
+      "status": "Alpha",
+      "date": "2026-05-23",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 1,
+      "status": "Hadir",
+      "date": "2026-03-07",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 2,
+      "status": "Sakit",
+      "date": "2026-03-14",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 3,
+      "status": "Hadir",
+      "date": "2026-03-21",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 4,
+      "status": "Hadir",
+      "date": "2026-03-28",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 5,
+      "status": "Sakit",
+      "date": "2026-04-04",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 6,
+      "status": "Hadir",
+      "date": "2026-04-11",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_7",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 7,
+      "status": "Hadir",
+      "date": "2026-04-18",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_8",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 8,
+      "status": "Hadir",
+      "date": "2026-04-25",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_9",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 9,
+      "status": "Hadir",
+      "date": "2026-05-02",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_10",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 10,
+      "status": "Sakit",
+      "date": "2026-05-09",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_11",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 11,
+      "status": "Hadir",
+      "date": "2026-05-16",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_2_12",
+      "user_id": "usr_mhs",
+      "course_id": "crs_2",
+      "meeting_number": 12,
+      "status": "Sakit",
+      "date": "2026-05-23",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 1,
+      "status": "Hadir",
+      "date": "2026-03-07",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 2,
+      "status": "Hadir",
+      "date": "2026-03-14",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 3,
+      "status": "Hadir",
+      "date": "2026-03-21",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 4,
+      "status": "Izin",
+      "date": "2026-03-28",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 5,
+      "status": "Hadir",
+      "date": "2026-04-04",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 6,
+      "status": "Izin",
+      "date": "2026-04-11",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_7",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 7,
+      "status": "Hadir",
+      "date": "2026-04-18",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_8",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 8,
+      "status": "Hadir",
+      "date": "2026-04-25",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_9",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 9,
+      "status": "Hadir",
+      "date": "2026-05-02",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_10",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 10,
+      "status": "Hadir",
+      "date": "2026-05-09",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_11",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 11,
+      "status": "Hadir",
+      "date": "2026-05-16",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_3_12",
+      "user_id": "usr_mhs",
+      "course_id": "crs_3",
+      "meeting_number": 12,
+      "status": "Hadir",
+      "date": "2026-05-23",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 1,
+      "status": "Izin",
+      "date": "2026-03-07",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 2,
+      "status": "Hadir",
+      "date": "2026-03-14",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 3,
+      "status": "Sakit",
+      "date": "2026-03-21",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 4,
+      "status": "Hadir",
+      "date": "2026-03-28",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 5,
+      "status": "Hadir",
+      "date": "2026-04-04",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 6,
+      "status": "Hadir",
+      "date": "2026-04-11",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_7",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 7,
+      "status": "Hadir",
+      "date": "2026-04-18",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_8",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 8,
+      "status": "Hadir",
+      "date": "2026-04-25",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_9",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 9,
+      "status": "Hadir",
+      "date": "2026-05-02",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_10",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 10,
+      "status": "Hadir",
+      "date": "2026-05-09",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_11",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 11,
+      "status": "Hadir",
+      "date": "2026-05-16",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_4_12",
+      "user_id": "usr_mhs",
+      "course_id": "crs_4",
+      "meeting_number": 12,
+      "status": "Hadir",
+      "date": "2026-05-23",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 1,
+      "status": "Hadir",
+      "date": "2026-03-07",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 2,
+      "status": "Hadir",
+      "date": "2026-03-14",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 3,
+      "status": "Hadir",
+      "date": "2026-03-21",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 4,
+      "status": "Hadir",
+      "date": "2026-03-28",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 5,
+      "status": "Hadir",
+      "date": "2026-04-04",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 6,
+      "status": "Hadir",
+      "date": "2026-04-11",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_7",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 7,
+      "status": "Hadir",
+      "date": "2026-04-18",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_8",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 8,
+      "status": "Hadir",
+      "date": "2026-04-25",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_9",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 9,
+      "status": "Hadir",
+      "date": "2026-05-02",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_10",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 10,
+      "status": "Hadir",
+      "date": "2026-05-09",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_11",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 11,
+      "status": "Hadir",
+      "date": "2026-05-16",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_5_12",
+      "user_id": "usr_mhs",
+      "course_id": "crs_5",
+      "meeting_number": 12,
+      "status": "Hadir",
+      "date": "2026-05-23",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_1",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 1,
+      "status": "Hadir",
+      "date": "2026-03-07",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_2",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 2,
+      "status": "Hadir",
+      "date": "2026-03-14",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_3",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 3,
+      "status": "Hadir",
+      "date": "2026-03-21",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_4",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 4,
+      "status": "Hadir",
+      "date": "2026-03-28",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_5",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 5,
+      "status": "Hadir",
+      "date": "2026-04-04",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_6",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 6,
+      "status": "Hadir",
+      "date": "2026-04-11",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_7",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 7,
+      "status": "Alpha",
+      "date": "2026-04-18",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_8",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 8,
+      "status": "Hadir",
+      "date": "2026-04-25",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_9",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 9,
+      "status": "Izin",
+      "date": "2026-05-02",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_10",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 10,
+      "status": "Hadir",
+      "date": "2026-05-09",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_11",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 11,
+      "status": "Hadir",
+      "date": "2026-05-16",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "att_crs_6_12",
+      "user_id": "usr_mhs",
+      "course_id": "crs_6",
+      "meeting_number": 12,
+      "status": "Hadir",
+      "date": "2026-05-23",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "grades": [
+    {
+      "id": "grd_1",
+      "course_id": "crs_1",
+      "user_id": "usr_mhs",
+      "assignment_score": 88,
+      "quiz_score": 85,
+      "midterm_score": 82,
+      "final_score": 86,
+      "final_grade": 84.8,
+      "letter_grade": "A",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "grd_2",
+      "course_id": "crs_2",
+      "user_id": "usr_mhs",
+      "assignment_score": 92,
+      "quiz_score": 90,
+      "midterm_score": 88,
+      "final_score": 94,
+      "final_grade": 91.6,
+      "letter_grade": "A",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "grd_3",
+      "course_id": "crs_3",
+      "user_id": "usr_mhs",
+      "assignment_score": 78,
+      "quiz_score": 80,
+      "midterm_score": 75,
+      "final_score": 80,
+      "final_grade": 78.2,
+      "letter_grade": "B+",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "grd_4",
+      "course_id": "crs_4",
+      "user_id": "usr_mhs",
+      "assignment_score": 85,
+      "quiz_score": 82,
+      "midterm_score": 80,
+      "final_score": 85,
+      "final_grade": 83.4,
+      "letter_grade": "A-",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "grd_5",
+      "course_id": "crs_5",
+      "user_id": "usr_mhs",
+      "assignment_score": 95,
+      "quiz_score": 92,
+      "midterm_score": 90,
+      "final_score": 93,
+      "final_grade": 92.4,
+      "letter_grade": "A",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "grd_6",
+      "course_id": "crs_6",
+      "user_id": "usr_mhs",
+      "assignment_score": 70,
+      "quiz_score": 75,
+      "midterm_score": 70,
+      "final_score": 72,
+      "final_grade": 71.3,
+      "letter_grade": "B",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay_1",
+      "user_id": "usr_mhs",
+      "invoice_code": "INV202640101",
+      "payment_type": "BPP",
+      "amount": 8500000,
+      "due_date": "2026-03-15",
+      "status": "Lunas",
+      "proof_file": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&q=80&w=300",
+      "paid_at": "2026-03-12T09:44:12Z",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "pay_2",
+      "user_id": "usr_mhs",
+      "invoice_code": "INV202640102",
+      "payment_type": "SKS",
+      "amount": 5400000,
+      "due_date": "2026-04-20",
+      "status": "Lunas",
+      "proof_file": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&q=80&w=300",
+      "paid_at": "2026-04-18T14:22:00Z",
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    },
+    {
+      "id": "pay_3",
+      "user_id": "usr_mhs",
+      "invoice_code": "INV202640103",
+      "payment_type": "Praktikum",
+      "amount": 1500000,
+      "due_date": "2026-05-30",
+      "status": "Menunggu Verifikasi",
+      "proof_file": "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&q=80&w=400",
+      "paid_at": null,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:11:24.261Z"
+    },
+    {
+      "id": "pay_4",
+      "user_id": "usr_mhs",
+      "invoice_code": "INV202640104",
+      "payment_type": "UTS",
+      "amount": 1200000,
+      "due_date": "2026-06-10",
+      "status": "Belum Lunas",
+      "proof_file": null,
+      "paid_at": null,
+      "created_at": "2026-06-06T13:09:52.651Z",
+      "updated_at": "2026-06-06T13:09:52.651Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "not_1",
+      "user_id": "usr_mhs",
+      "title": "Pengumuman Pengisian KRS Semester Antara",
+      "message": "Pengisian KRS untuk Semester Antara akan dibuka mulai tanggal 1 Juni 2026 s.d. 15 Juni 2026. Harap hubungi dosen wali.",
+      "type": "pengumuman",
+      "is_read": false,
+      "created_at": "2026-06-06T11:09:52.652Z",
+      "updated_at": "2026-06-06T11:09:52.652Z"
+    },
+    {
+      "id": "not_2",
+      "user_id": "usr_mhs",
+      "title": "Tagihan Pembayaran Praktikum",
+      "message": "Tagihan Pembayaran Praktikum sebesar Rp1.500.000 mendekati tanggal jatuh tempo 30 Mei 2026. Harap segera melakukan pembayaran.",
+      "type": "pembayaran",
+      "is_read": false,
+      "created_at": "2026-06-06T01:09:52.652Z",
+      "updated_at": "2026-06-06T01:09:52.652Z"
+    },
+    {
+      "id": "not_3",
+      "user_id": "usr_mhs",
+      "title": "Nilai UTS Telah Dirilis",
+      "message": "Dosen Rita Wahyuni telah merilis nilai UTS untuk mata kuliah Arsitektur Berorientasi Layanan (SOA) dengan nilai: 88.",
+      "type": "nilai",
+      "is_read": false,
+      "created_at": "2026-06-05T13:09:52.652Z",
+      "updated_at": "2026-06-05T13:09:52.652Z"
+    },
+    {
+      "id": "not_4",
+      "user_id": "usr_mhs",
+      "title": "Absensi Terhitung Hadir",
+      "message": "Absensi Anda pada pertemuan ke-12 mata kuliah Pemrograman Web Enterprise telah terverifikasi sebagai Hadir.",
+      "type": "absensi",
+      "is_read": true,
+      "created_at": "2026-06-04T13:09:52.652Z",
+      "updated_at": "2026-06-04T13:09:52.652Z"
+    },
+    {
+      "id": "not_otp_1780751433445",
+      "user_id": "usr_mhs",
+      "title": "Kode Keamanan (2FA) OTP",
+      "message": "Kode verifikasi 2 langkah untuk masuk ke akun SIAKAD Anda adalah: 376988. Jangan sebarkan kode ini ke siapapun.",
+      "type": "sistem",
+      "is_read": false,
+      "created_at": "2026-06-06T13:10:33.445Z",
+      "updated_at": "2026-06-06T13:10:33.445Z"
+    },
+    {
+      "id": "not_pay_ver_1780751484262",
+      "user_id": "usr_mhs",
+      "title": "Bukti Pembayaran Diunggah",
+      "message": "Bukti transfer Anda untuk tagihan Praktikum (INV202640103) berhasil kami terima. Sedang diverifikasi oleh Bagian Keuangan Kampus.",
+      "type": "pembayaran",
+      "is_read": false,
+      "created_at": "2026-06-06T13:11:24.262Z",
+      "updated_at": "2026-06-06T13:11:24.262Z"
+    },
+    {
+      "id": "not_otp_1780845101896",
+      "user_id": "usr_mhs",
+      "title": "Kode Keamanan (2FA) OTP",
+      "message": "Kode verifikasi 2 langkah untuk masuk ke akun SIAKAD Anda adalah: 890791. Jangan sebarkan kode ini ke siapapun.",
+      "type": "sistem",
+      "is_read": false,
+      "created_at": "2026-06-07T15:11:41.896Z",
+      "updated_at": "2026-06-07T15:11:41.896Z"
+    },
+    {
+      "id": "not_otp_1780845999833",
+      "user_id": "usr_mhs",
+      "title": "Kode Keamanan (2FA) OTP",
+      "message": "Kode verifikasi 2 langkah untuk masuk ke akun SIAKAD Anda adalah: 435482. Jangan sebarkan kode ini ke siapapun.",
+      "type": "sistem",
+      "is_read": false,
+      "created_at": "2026-06-07T15:26:39.833Z",
+      "updated_at": "2026-06-07T15:26:39.833Z"
+    },
+    {
+      "id": "not_otp_resend_1780846005457",
+      "user_id": "usr_mhs",
+      "title": "Kirim Ulang Kode OTP",
+      "message": "Berikut adalah kode verifikasi OTP baru Anda: 470789. Masa berlaku kode ini adalah 5 menit.",
+      "type": "sistem",
+      "is_read": false,
+      "created_at": "2026-06-07T15:26:45.457Z",
+      "updated_at": "2026-06-07T15:26:45.457Z"
+    },
+    {
+      "id": "not_otp_1780846160677",
+      "user_id": "usr_mhs",
+      "title": "Kode Keamanan (2FA) OTP",
+      "message": "Kode verifikasi 2 langkah untuk masuk ke akun SIAKAD Anda adalah: 682859. Jangan sebarkan kode ini ke siapapun.",
+      "type": "sistem",
+      "is_read": false,
+      "created_at": "2026-06-07T15:29:20.676Z",
+      "updated_at": "2026-06-07T15:29:20.676Z"
+    }
+  ],
+  "otp_codes": [
+    {
+      "id": "otp_1780751433445",
+      "user_id": "usr_mhs",
+      "email": "mahasiswa@esaunggul.ac.id",
+      "otp_code": "376988",
+      "expires_at": "2026-06-06T13:15:33.445Z",
+      "is_used": true,
+      "created_at": "2026-06-06T13:10:33.445Z",
+      "updated_at": "2026-06-06T13:10:33.445Z"
+    },
+    {
+      "id": "otp_1780845101896",
+      "user_id": "usr_mhs",
+      "email": "mahasiswa@esaunggul.ac.id",
+      "otp_code": "890791",
+      "expires_at": "2026-06-07T15:16:41.896Z",
+      "is_used": true,
+      "created_at": "2026-06-07T15:11:41.896Z",
+      "updated_at": "2026-06-07T15:11:41.896Z"
+    },
+    {
+      "id": "otp_1780845999833",
+      "user_id": "usr_mhs",
+      "email": "mahasiswa@esaunggul.ac.id",
+      "otp_code": "435482",
+      "expires_at": "2026-06-07T15:31:39.833Z",
+      "is_used": false,
+      "created_at": "2026-06-07T15:26:39.833Z",
+      "updated_at": "2026-06-07T15:26:39.833Z"
+    },
+    {
+      "id": "otp_resend_1780846005457",
+      "user_id": "usr_mhs",
+      "email": "mahasiswa@esaunggul.ac.id",
+      "otp_code": "470789",
+      "expires_at": "2026-06-07T15:31:45.457Z",
+      "is_used": false,
+      "created_at": "2026-06-07T15:26:45.457Z",
+      "updated_at": "2026-06-07T15:26:45.457Z"
+    },
+    {
+      "id": "otp_1780846160677",
+      "user_id": "usr_mhs",
+      "email": "mahasiswa@esaunggul.ac.id",
+      "otp_code": "682859",
+      "expires_at": "2026-06-07T15:34:20.677Z",
+      "is_used": true,
+      "created_at": "2026-06-07T15:29:20.676Z",
+      "updated_at": "2026-06-07T15:29:20.676Z"
+    }
+  ],
+  "api_performance_logs": [
+    {
+      "id": "log_1780845832684_byzbf",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:23:52.684Z"
+    },
+    {
+      "id": "log_1780845832733_ymyu5",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:23:52.733Z"
+    },
+    {
+      "id": "log_1780845832734_86z6d",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:23:52.734Z"
+    },
+    {
+      "id": "log_1780845832784_291tl",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:23:52.784Z"
+    },
+    {
+      "id": "log_1780845832785_izcn1",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:23:52.785Z"
+    },
+    {
+      "id": "log_1780845832847_jafou",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:23:52.847Z"
+    },
+    {
+      "id": "log_1780845832848_1x52p",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:23:52.848Z"
+    },
+    {
+      "id": "log_1780845832903_eq15r",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:23:52.903Z"
+    },
+    {
+      "id": "log_1780845832904_xqykj",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:23:52.904Z"
+    },
+    {
+      "id": "log_1780845832958_08o4s",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:23:52.958Z"
+    },
+    {
+      "id": "log_1780845832959_4jau2",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:23:52.959Z"
+    },
+    {
+      "id": "log_1780845835529_i286x",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:23:55.529Z"
+    },
+    {
+      "id": "log_1780845837525_ielhk",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:23:57.525Z"
+    },
+    {
+      "id": "log_1780845839525_xx3k3",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:23:59.525Z"
+    },
+    {
+      "id": "log_1780845841525_23vo0",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.21,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:01.525Z"
+    },
+    {
+      "id": "log_1780845843525_lunnk",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:03.525Z"
+    },
+    {
+      "id": "log_1780845845526_hmthp",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:05.526Z"
+    },
+    {
+      "id": "log_1780845847525_g6rtd",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:07.525Z"
+    },
+    {
+      "id": "log_1780845849525_xg3lu",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:09.525Z"
+    },
+    {
+      "id": "log_1780845851525_bf7wn",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:11.525Z"
+    },
+    {
+      "id": "log_1780845853526_8tjtv",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:13.526Z"
+    },
+    {
+      "id": "log_1780845855524_yl2d2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:15.524Z"
+    },
+    {
+      "id": "log_1780845857524_7zoao",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:17.524Z"
+    },
+    {
+      "id": "log_1780845859524_o7kza",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:19.524Z"
+    },
+    {
+      "id": "log_1780845861525_td226",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:21.525Z"
+    },
+    {
+      "id": "log_1780845863525_tghyh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:23.525Z"
+    },
+    {
+      "id": "log_1780845865524_hhe13",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:25.524Z"
+    },
+    {
+      "id": "log_1780845867525_qeqk4",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:27.525Z"
+    },
+    {
+      "id": "log_1780845869523_rsjx5",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:29.523Z"
+    },
+    {
+      "id": "log_1780845871523_7zp6s",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:31.523Z"
+    },
+    {
+      "id": "log_1780845873524_jp5w6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:33.524Z"
+    },
+    {
+      "id": "log_1780845875524_j8y7j",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:35.524Z"
+    },
+    {
+      "id": "log_1780845877523_8rt1v",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:37.523Z"
+    },
+    {
+      "id": "log_1780845879523_wd92q",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:39.523Z"
+    },
+    {
+      "id": "log_1780845880854_ct93j",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.23,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:40.854Z"
+    },
+    {
+      "id": "log_1780845883524_cjw1i",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:43.524Z"
+    },
+    {
+      "id": "log_1780845885522_jizow",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:45.522Z"
+    },
+    {
+      "id": "log_1780845887523_1eb03",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.16,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:47.523Z"
+    },
+    {
+      "id": "log_1780845889521_g5hbc",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:49.521Z"
+    },
+    {
+      "id": "log_1780845891523_nvczi",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:51.523Z"
+    },
+    {
+      "id": "log_1780845893522_6qsmh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:53.522Z"
+    },
+    {
+      "id": "log_1780845895521_jzh0h",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:55.521Z"
+    },
+    {
+      "id": "log_1780845897520_wq6nf",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:57.520Z"
+    },
+    {
+      "id": "log_1780845899521_zhl6t",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:24:59.521Z"
+    },
+    {
+      "id": "log_1780845901524_mqyu8",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:01.524Z"
+    },
+    {
+      "id": "log_1780845903528_zdvfl",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:03.528Z"
+    },
+    {
+      "id": "log_1780845905521_dd2y7",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:05.521Z"
+    },
+    {
+      "id": "log_1780845907532_vmx5g",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.45,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:07.532Z"
+    },
+    {
+      "id": "log_1780845909530_ktrle",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:09.530Z"
+    },
+    {
+      "id": "log_1780845911523_z2tne",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:11.523Z"
+    },
+    {
+      "id": "log_1780845913522_foqti",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:13.522Z"
+    },
+    {
+      "id": "log_1780845915521_d316v",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:15.521Z"
+    },
+    {
+      "id": "log_1780845917522_zyj10",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:17.522Z"
+    },
+    {
+      "id": "log_1780845917621_omoe8",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:17.621Z"
+    },
+    {
+      "id": "log_1780845917623_b0mjg",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:17.623Z"
+    },
+    {
+      "id": "log_1780845917676_qjz9g",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:17.676Z"
+    },
+    {
+      "id": "log_1780845917677_9t3t3",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:17.677Z"
+    },
+    {
+      "id": "log_1780845917702_xeckt",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:17.702Z"
+    },
+    {
+      "id": "log_1780845917703_lzgh9",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:17.703Z"
+    },
+    {
+      "id": "log_1780845917717_vcb8g",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:17.717Z"
+    },
+    {
+      "id": "log_1780845917718_twmnx",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:17.718Z"
+    },
+    {
+      "id": "log_1780845917740_fm8dk",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:17.740Z"
+    },
+    {
+      "id": "log_1780845917741_spv8d",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:17.741Z"
+    },
+    {
+      "id": "log_1780845917758_zzlbm",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:17.758Z"
+    },
+    {
+      "id": "log_1780845917759_1dpr9",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:17.759Z"
+    },
+    {
+      "id": "log_1780845917775_evn3c",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:17.775Z"
+    },
+    {
+      "id": "log_1780845917776_frs5f",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.01,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:17.776Z"
+    },
+    {
+      "id": "log_1780845920531_czawc",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:20.531Z"
+    },
+    {
+      "id": "log_1780845920630_yjruo",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:20.630Z"
+    },
+    {
+      "id": "log_1780845920631_z8ej7",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:20.631Z"
+    },
+    {
+      "id": "log_1780845920685_5uhgu",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:20.685Z"
+    },
+    {
+      "id": "log_1780845920687_xq70a",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:20.687Z"
+    },
+    {
+      "id": "log_1780845920767_ja4g3",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:20.767Z"
+    },
+    {
+      "id": "log_1780845920769_mvnjp",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:20.769Z"
+    },
+    {
+      "id": "log_1780845920856_9jpb0",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.18,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:20.856Z"
+    },
+    {
+      "id": "log_1780845920858_gx3my",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:20.858Z"
+    },
+    {
+      "id": "log_1780845920927_x0r2j",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:20.927Z"
+    },
+    {
+      "id": "log_1780845920930_x8gyw",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:20.930Z"
+    },
+    {
+      "id": "log_1780845920989_czrh3",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:20.989Z"
+    },
+    {
+      "id": "log_1780845920992_d74sw",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:20.992Z"
+    },
+    {
+      "id": "log_1780845921046_b9oer",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:21.046Z"
+    },
+    {
+      "id": "log_1780845921049_ged4k",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:21.049Z"
+    },
+    {
+      "id": "log_1780845925535_mm57m",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.9,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:25.535Z"
+    },
+    {
+      "id": "log_1780845927534_y93c0",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.21,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:27.534Z"
+    },
+    {
+      "id": "log_1780845928091_x9991",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.33,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:28.091Z"
+    },
+    {
+      "id": "log_1780845928095_dzlln",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.22,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:28.095Z"
+    },
+    {
+      "id": "log_1780845928137_cfdr3",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 1.68,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:28.137Z"
+    },
+    {
+      "id": "log_1780845928143_kwo2h",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.23,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:28.143Z"
+    },
+    {
+      "id": "log_1780845928166_wfmmk",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.55,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:28.166Z"
+    },
+    {
+      "id": "log_1780845928168_qfcn1",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:28.168Z"
+    },
+    {
+      "id": "log_1780845928183_d3fru",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.47,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:28.183Z"
+    },
+    {
+      "id": "log_1780845928184_g5qlw",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:28.184Z"
+    },
+    {
+      "id": "log_1780845928195_2ya1v",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.23,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:28.195Z"
+    },
+    {
+      "id": "log_1780845928200_zoxel",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:28.200Z"
+    },
+    {
+      "id": "log_1780845928220_tw39n",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:28.220Z"
+    },
+    {
+      "id": "log_1780845928222_4e0cu",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:28.222Z"
+    },
+    {
+      "id": "log_1780845928236_ld96h",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:28.236Z"
+    },
+    {
+      "id": "log_1780845928237_vqghm",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:28.237Z"
+    },
+    {
+      "id": "log_1780845928908_wfko2",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:28.908Z"
+    },
+    {
+      "id": "log_1780845928911_y2kop",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 1.04,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:25:28.911Z"
+    },
+    {
+      "id": "log_1780845928944_y23yn",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.19,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:28.944Z"
+    },
+    {
+      "id": "log_1780845928950_b7qrn",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 1.69,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:25:28.950Z"
+    },
+    {
+      "id": "log_1780845928962_zp2kc",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 1.01,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:28.962Z"
+    },
+    {
+      "id": "log_1780845928965_gbv7r",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:25:28.965Z"
+    },
+    {
+      "id": "log_1780845928978_molbu",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:28.978Z"
+    },
+    {
+      "id": "log_1780845928983_0ziop",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:25:28.983Z"
+    },
+    {
+      "id": "log_1780845928998_9gmvr",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:28.998Z"
+    },
+    {
+      "id": "log_1780845929004_xgsjn",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.28,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:25:29.004Z"
+    },
+    {
+      "id": "log_1780845929016_dyrf7",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:29.016Z"
+    },
+    {
+      "id": "log_1780845929017_1qh70",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.02,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:25:29.017Z"
+    },
+    {
+      "id": "log_1780845929027_ysino",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:29.027Z"
+    },
+    {
+      "id": "log_1780845929028_iff0t",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:29.028Z"
+    },
+    {
+      "id": "log_1780845930909_l7k4p",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:30.909Z"
+    },
+    {
+      "id": "log_1780845932921_b3hc6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:32.921Z"
+    },
+    {
+      "id": "log_1780845934911_wwk4t",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:34.911Z"
+    },
+    {
+      "id": "log_1780845936911_98g8q",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:36.911Z"
+    },
+    {
+      "id": "log_1780845938912_m55wa",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.14,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:38.912Z"
+    },
+    {
+      "id": "log_1780845940909_btfc5",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:40.909Z"
+    },
+    {
+      "id": "log_sec_1780845942324",
+      "api_type": "SOAP",
+      "endpoint": "/api/security/DDOS (MITIGATED BY WSO2)",
+      "method": "POST",
+      "response_time_ms": 2.1,
+      "status_code": 429,
+      "payload_size_bytes": 312,
+      "created_at": "2026-06-07T15:25:42.324Z"
+    },
+    {
+      "id": "log_1780845942909_b248u",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:42.909Z"
+    },
+    {
+      "id": "log_1780845944910_fubty",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:44.910Z"
+    },
+    {
+      "id": "log_1780845946910_kmvtt",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:46.910Z"
+    },
+    {
+      "id": "log_1780845948911_l5en2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:48.911Z"
+    },
+    {
+      "id": "log_1780845950912_u3wbj",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:50.912Z"
+    },
+    {
+      "id": "log_1780845952911_r9ht6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:52.911Z"
+    },
+    {
+      "id": "log_1780845954910_reeht",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:54.910Z"
+    },
+    {
+      "id": "log_1780845956909_iyxld",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:56.909Z"
+    },
+    {
+      "id": "log_1780845958910_gkcqy",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:25:58.910Z"
+    },
+    {
+      "id": "log_sec_1780845959972",
+      "api_type": "SOAP",
+      "endpoint": "/api/security/SQLI (MITIGATED BY WSO2)",
+      "method": "POST",
+      "response_time_ms": 2.1,
+      "status_code": 403,
+      "payload_size_bytes": 312,
+      "created_at": "2026-06-07T15:25:59.972Z"
+    },
+    {
+      "id": "log_1780845960911_zxdze",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:00.911Z"
+    },
+    {
+      "id": "log_1780845962965_wrexn",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:02.965Z"
+    },
+    {
+      "id": "log_1780845964910_fls59",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:04.910Z"
+    },
+    {
+      "id": "log_sec_1780845965755",
+      "api_type": "SOAP",
+      "endpoint": "/api/security/BYPASS (MITIGATED BY WSO2)",
+      "method": "POST",
+      "response_time_ms": 2.1,
+      "status_code": 401,
+      "payload_size_bytes": 312,
+      "created_at": "2026-06-07T15:26:05.755Z"
+    },
+    {
+      "id": "log_1780845966911_ob5p2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:06.911Z"
+    },
+    {
+      "id": "log_1780845968910_3uh6s",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:08.910Z"
+    },
+    {
+      "id": "log_sec_1780845970639",
+      "api_type": "SOAP",
+      "endpoint": "/api/security/XMLBOMB (MITIGATED BY WSO2)",
+      "method": "POST",
+      "response_time_ms": 2.1,
+      "status_code": 400,
+      "payload_size_bytes": 312,
+      "created_at": "2026-06-07T15:26:10.639Z"
+    },
+    {
+      "id": "log_1780845970908_9z8aa",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:10.908Z"
+    },
+    {
+      "id": "log_1780845972912_3i26x",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.17,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:12.912Z"
+    },
+    {
+      "id": "log_1780845974909_bl3v3",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:14.909Z"
+    },
+    {
+      "id": "log_manual_1780845976107_rest",
+      "api_type": "REST",
+      "endpoint": "/api/courses (Performance Benchmark)",
+      "method": "GET",
+      "response_time_ms": 0.18,
+      "status_code": 200,
+      "payload_size_bytes": 928,
+      "created_at": "2026-06-07T15:26:16.107Z"
+    },
+    {
+      "id": "log_1780845976912_jyyb9",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:16.912Z"
+    },
+    {
+      "id": "log_manual_1780845978090_soap",
+      "api_type": "SOAP",
+      "endpoint": "/soap/courses (Performance Benchmark)",
+      "method": "POST",
+      "response_time_ms": 18.880000000000003,
+      "status_code": 200,
+      "payload_size_bytes": 2679,
+      "created_at": "2026-06-07T15:26:18.090Z"
+    },
+    {
+      "id": "log_1780845978909_tyfru",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:18.909Z"
+    },
+    {
+      "id": "log_1780845980910_qqhjd",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:20.910Z"
+    },
+    {
+      "id": "log_1780845982913_rx289",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:22.913Z"
+    },
+    {
+      "id": "log_1780845984910_jhzew",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:24.910Z"
+    },
+    {
+      "id": "log_1780845986909_edrh2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:26.909Z"
+    },
+    {
+      "id": "log_1780845988909_l12k4",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:28.909Z"
+    },
+    {
+      "id": "log_1780845990908_x2ifm",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:30.909Z"
+    },
+    {
+      "id": "log_1780845992909_mzzuv",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2288,
+      "created_at": "2026-06-07T15:26:32.909Z"
+    },
+    {
+      "id": "log_1780845999834_giwih",
+      "api_type": "REST",
+      "endpoint": "/api/auth/login",
+      "method": "POST",
+      "response_time_ms": 1.53,
+      "status_code": 200,
+      "payload_size_bytes": 151,
+      "created_at": "2026-06-07T15:26:39.834Z"
+    },
+    {
+      "id": "log_1780846005458_tns8r",
+      "api_type": "REST",
+      "endpoint": "/api/auth/resend-otp",
+      "method": "POST",
+      "response_time_ms": 1.47,
+      "status_code": 200,
+      "payload_size_bytes": 74,
+      "created_at": "2026-06-07T15:26:45.458Z"
+    },
+    {
+      "id": "log_1780846160678_aoykc",
+      "api_type": "REST",
+      "endpoint": "/api/auth/login",
+      "method": "POST",
+      "response_time_ms": 1.68,
+      "status_code": 200,
+      "payload_size_bytes": 151,
+      "created_at": "2026-06-07T15:29:20.678Z"
+    },
+    {
+      "id": "log_1780846162769_tfkvg",
+      "api_type": "REST",
+      "endpoint": "/api/notifications?userId=usr_mhs",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:22.769Z"
+    },
+    {
+      "id": "log_1780846164765_5iqru",
+      "api_type": "REST",
+      "endpoint": "/api/notifications?userId=usr_mhs",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:24.765Z"
+    },
+    {
+      "id": "log_1780846166766_russn",
+      "api_type": "REST",
+      "endpoint": "/api/notifications?userId=usr_mhs",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:26.766Z"
+    },
+    {
+      "id": "log_1780846167250_vm9p1",
+      "api_type": "REST",
+      "endpoint": "/api/auth/verify-otp",
+      "method": "POST",
+      "response_time_ms": 1.65,
+      "status_code": 200,
+      "payload_size_bytes": 194,
+      "created_at": "2026-06-07T15:29:27.250Z"
+    },
+    {
+      "id": "log_1780846167467_gxzwm",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/dashboard/summary",
+      "method": "GET",
+      "response_time_ms": 1.56,
+      "status_code": 200,
+      "payload_size_bytes": 542,
+      "created_at": "2026-06-07T15:29:27.467Z"
+    },
+    {
+      "id": "log_1780846167639_78r0e",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/courses",
+      "method": "GET",
+      "response_time_ms": 0.29,
+      "status_code": 200,
+      "payload_size_bytes": 2674,
+      "created_at": "2026-06-07T15:29:27.639Z"
+    },
+    {
+      "id": "log_1780846167756_mrjc2",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/schedules",
+      "method": "GET",
+      "response_time_ms": 0.37,
+      "status_code": 200,
+      "payload_size_bytes": 1922,
+      "created_at": "2026-06-07T15:29:27.756Z"
+    },
+    {
+      "id": "log_1780846167834_8bh2t",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/attendance",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 1570,
+      "created_at": "2026-06-07T15:29:27.834Z"
+    },
+    {
+      "id": "log_1780846167927_qqdug",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/grades",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 1990,
+      "created_at": "2026-06-07T15:29:27.927Z"
+    },
+    {
+      "id": "log_1780846168094_tq8jh",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/payments",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 1376,
+      "created_at": "2026-06-07T15:29:28.094Z"
+    },
+    {
+      "id": "log_1780846168194_rsc53",
+      "api_type": "REST",
+      "endpoint": "/wso2/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:28.194Z"
+    },
+    {
+      "id": "log_1780846169458_gsypu",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:29.458Z"
+    },
+    {
+      "id": "log_1780846171455_0gn7o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:31.455Z"
+    },
+    {
+      "id": "log_1780846173458_gu63g",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:33.458Z"
+    },
+    {
+      "id": "log_manual_1780846173716_rest",
+      "api_type": "REST",
+      "endpoint": "/api/courses (Performance Benchmark)",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 928,
+      "created_at": "2026-06-07T15:29:33.716Z"
+    },
+    {
+      "id": "log_manual_1780846175048_soap",
+      "api_type": "SOAP",
+      "endpoint": "/soap/courses (Performance Benchmark)",
+      "method": "POST",
+      "response_time_ms": 20.330000000000002,
+      "status_code": 200,
+      "payload_size_bytes": 2679,
+      "created_at": "2026-06-07T15:29:35.048Z"
+    },
+    {
+      "id": "log_1780846175526_47itq",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:35.526Z"
+    },
+    {
+      "id": "log_1780846177459_5unci",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:37.459Z"
+    },
+    {
+      "id": "log_1780846179457_yi2zq",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:39.457Z"
+    },
+    {
+      "id": "log_1780846181459_wmpkj",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:41.459Z"
+    },
+    {
+      "id": "log_sec_1780846183212",
+      "api_type": "SOAP",
+      "endpoint": "/api/security/DDOS (MITIGATED BY WSO2)",
+      "method": "POST",
+      "response_time_ms": 2.1,
+      "status_code": 429,
+      "payload_size_bytes": 312,
+      "created_at": "2026-06-07T15:29:43.212Z"
+    },
+    {
+      "id": "log_1780846183673_amqzx",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:43.673Z"
+    },
+    {
+      "id": "log_1780846185457_46t27",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:45.457Z"
+    },
+    {
+      "id": "log_1780846187456_n9012",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:47.456Z"
+    },
+    {
+      "id": "log_1780846189519_9wzfe",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:49.519Z"
+    },
+    {
+      "id": "log_1780846191519_m51p5",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:51.519Z"
+    },
+    {
+      "id": "log_1780846193518_7tzir",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:53.518Z"
+    },
+    {
+      "id": "log_1780846195516_7wc75",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:55.516Z"
+    },
+    {
+      "id": "log_1780846197518_xfpso",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:57.518Z"
+    },
+    {
+      "id": "log_1780846199517_0638o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:29:59.517Z"
+    },
+    {
+      "id": "log_1780846201517_rtwjx",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.14,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:01.517Z"
+    },
+    {
+      "id": "log_1780846203517_7v3t0",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:03.517Z"
+    },
+    {
+      "id": "log_1780846205517_4uemh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:05.517Z"
+    },
+    {
+      "id": "log_1780846207518_gbbxs",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:07.518Z"
+    },
+    {
+      "id": "log_1780846209521_h6lhg",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:09.521Z"
+    },
+    {
+      "id": "log_1780846211515_d3maf",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:11.515Z"
+    },
+    {
+      "id": "log_1780846213517_1xj9o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:13.517Z"
+    },
+    {
+      "id": "log_1780846215516_9tgj2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:15.516Z"
+    },
+    {
+      "id": "log_1780846217517_qmdkh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:17.517Z"
+    },
+    {
+      "id": "log_1780846219518_3mwp4",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:19.518Z"
+    },
+    {
+      "id": "log_1780846221517_zmp0m",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:21.517Z"
+    },
+    {
+      "id": "log_1780846223518_p2qd7",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.2,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:23.518Z"
+    },
+    {
+      "id": "log_1780846225517_2weua",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:25.517Z"
+    },
+    {
+      "id": "log_1780846227515_uq769",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:27.515Z"
+    },
+    {
+      "id": "log_1780846229520_0ci5u",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.16,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:29.520Z"
+    },
+    {
+      "id": "log_1780846231522_dkr9r",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.44,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:31.522Z"
+    },
+    {
+      "id": "log_1780846233522_r222q",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:33.522Z"
+    },
+    {
+      "id": "log_1780846235525_kzugh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:35.525Z"
+    },
+    {
+      "id": "log_1780846237528_1jrls",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:37.528Z"
+    },
+    {
+      "id": "log_1780846239528_yu4uh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.18,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:39.528Z"
+    },
+    {
+      "id": "log_1780846241529_2ztx0",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:41.529Z"
+    },
+    {
+      "id": "log_1780846243530_xrfu2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.14,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:43.530Z"
+    },
+    {
+      "id": "log_1780846245532_lpvy7",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.34,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:45.532Z"
+    },
+    {
+      "id": "log_1780846247531_0oh6g",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:30:47.531Z"
+    },
+    {
+      "id": "log_1780846269541_ftzw6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:31:09.541Z"
+    },
+    {
+      "id": "log_1780846329544_f6he8",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.24,
+      "status_code": 200,
+      "payload_size_bytes": 3235,
+      "created_at": "2026-06-07T15:32:09.544Z"
+    }
+  ]
+}
