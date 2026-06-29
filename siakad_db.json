@@ -1473,726 +1473,6 @@
   ],
   "api_performance_logs": [
     {
-      "id": "log_1781277898308_b91x0",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:24:58.308Z"
-    },
-    {
-      "id": "log_manual_1781277899176_rest",
-      "api_type": "REST",
-      "endpoint": "/api/courses (Performance Benchmark)",
-      "method": "GET",
-      "response_time_ms": 0.23,
-      "status_code": 200,
-      "payload_size_bytes": 1215,
-      "created_at": "2026-06-12T15:24:59.175Z"
-    },
-    {
-      "id": "log_1781277900309_9421u",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:00.309Z"
-    },
-    {
-      "id": "log_manual_1781277902227_soap",
-      "api_type": "SOAP",
-      "endpoint": "/soap/courses (Performance Benchmark)",
-      "method": "POST",
-      "response_time_ms": 19.080000000000002,
-      "status_code": 200,
-      "payload_size_bytes": 3414,
-      "created_at": "2026-06-12T15:25:02.227Z"
-    },
-    {
-      "id": "log_1781277902310_isrjm",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:02.310Z"
-    },
-    {
-      "id": "log_1781277904308_jra4x",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:04.308Z"
-    },
-    {
-      "id": "log_1781277906307_k0309",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.03,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:06.307Z"
-    },
-    {
-      "id": "log_1781277908309_hbnhi",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.09,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:08.309Z"
-    },
-    {
-      "id": "log_1781277910307_0rkqh",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:10.307Z"
-    },
-    {
-      "id": "log_1781277912308_cz089",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:12.308Z"
-    },
-    {
-      "id": "log_1781277914308_kn2ob",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.12,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:14.308Z"
-    },
-    {
-      "id": "log_1781277916308_rwzqt",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:16.308Z"
-    },
-    {
-      "id": "log_1781277918309_9ln7n",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.09,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:18.309Z"
-    },
-    {
-      "id": "log_1781277920311_4jnjy",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:20.311Z"
-    },
-    {
-      "id": "log_1781277922311_jt4w6",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:22.311Z"
-    },
-    {
-      "id": "log_1781277924308_0fnrf",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:24.308Z"
-    },
-    {
-      "id": "log_1781277926307_ja6op",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:26.307Z"
-    },
-    {
-      "id": "log_sec_1781277927177",
-      "api_type": "SOAP",
-      "endpoint": "/api/security/DDOS (MITIGATED BY WSO2)",
-      "method": "POST",
-      "response_time_ms": 2.1,
-      "status_code": 429,
-      "payload_size_bytes": 312,
-      "created_at": "2026-06-12T15:25:27.176Z"
-    },
-    {
-      "id": "log_1781277928309_1x6z1",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:28.309Z"
-    },
-    {
-      "id": "log_1781277930308_yceu6",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.13,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:30.309Z"
-    },
-    {
-      "id": "log_1781277932320_7cwsd",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:32.320Z"
-    },
-    {
-      "id": "log_1781277934309_4ocb1",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:34.309Z"
-    },
-    {
-      "id": "log_1781277936307_dpg6s",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:36.307Z"
-    },
-    {
-      "id": "log_1781277938308_7w5rn",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.26,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:38.308Z"
-    },
-    {
-      "id": "log_1781277941167_maado",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.08,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:41.167Z"
-    },
-    {
-      "id": "log_1781277943168_zvqg8",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.04,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:43.168Z"
-    },
-    {
-      "id": "log_1781277945167_1xw4n",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:45.167Z"
-    },
-    {
-      "id": "log_1781277947166_upv1p",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.03,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:47.166Z"
-    },
-    {
-      "id": "log_1781277949167_49vfa",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.05,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:49.167Z"
-    },
-    {
-      "id": "log_1781277951166_dwh6o",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.03,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:51.166Z"
-    },
-    {
-      "id": "log_1781277953166_8pqvv",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:53.166Z"
-    },
-    {
-      "id": "log_1781277955167_59oyk",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.09,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:55.167Z"
-    },
-    {
-      "id": "log_1781277957167_w7srw",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:57.167Z"
-    },
-    {
-      "id": "log_1781277959165_zohem",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.03,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:25:59.165Z"
-    },
-    {
-      "id": "log_1781277960310_h8bh0",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.15,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:00.310Z"
-    },
-    {
-      "id": "log_1781277962310_eukdk",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:02.310Z"
-    },
-    {
-      "id": "log_1781277964311_8prd9",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.04,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:04.311Z"
-    },
-    {
-      "id": "log_1781277966316_la2c4",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:06.316Z"
-    },
-    {
-      "id": "log_1781277968315_hqowy",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:08.315Z"
-    },
-    {
-      "id": "log_1781277970324_ih1fe",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.25,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:10.324Z"
-    },
-    {
-      "id": "log_1781277973176_u1esr",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.03,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:13.176Z"
-    },
-    {
-      "id": "log_1781277975177_9077i",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.04,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:15.177Z"
-    },
-    {
-      "id": "log_1781277977186_0kow5",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:17.186Z"
-    },
-    {
-      "id": "log_1781277979180_zmme6",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:19.180Z"
-    },
-    {
-      "id": "log_1781277981066_fr7mf",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.03,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:21.066Z"
-    },
-    {
-      "id": "log_1781277982326_yjw04",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 4.05,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:22.326Z"
-    },
-    {
-      "id": "log_1781277984321_g1r4b",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:24.321Z"
-    },
-    {
-      "id": "log_1781277986322_4y11y",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.05,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:26.322Z"
-    },
-    {
-      "id": "log_1781277989182_dolz3",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.04,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:29.182Z"
-    },
-    {
-      "id": "log_1781277991181_qb7tk",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:31.181Z"
-    },
-    {
-      "id": "log_1781277993183_1lsgu",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:33.183Z"
-    },
-    {
-      "id": "log_1781277995183_3pscw",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.12,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:35.183Z"
-    },
-    {
-      "id": "log_1781277996323_ks8xm",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:36.323Z"
-    },
-    {
-      "id": "log_1781277998327_4jmdw",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.22,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:38.327Z"
-    },
-    {
-      "id": "log_1781278000323_7261m",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:40.323Z"
-    },
-    {
-      "id": "log_1781278002396_63fez",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.21,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:42.396Z"
-    },
-    {
-      "id": "log_1781278004323_x57uc",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:44.323Z"
-    },
-    {
-      "id": "log_1781278006325_w06me",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.11,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:46.325Z"
-    },
-    {
-      "id": "log_1781278008324_yhw3m",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.13,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:48.324Z"
-    },
-    {
-      "id": "log_1781278010327_vvt05",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.15,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:50.327Z"
-    },
-    {
-      "id": "log_1781278012326_l7xec",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:52.326Z"
-    },
-    {
-      "id": "log_1781278014326_oiveo",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.15,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:54.326Z"
-    },
-    {
-      "id": "log_1781278016323_hmz9t",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:56.323Z"
-    },
-    {
-      "id": "log_1781278018324_0t57r",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.09,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:26:58.324Z"
-    },
-    {
-      "id": "log_1781278020325_yek3q",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:00.325Z"
-    },
-    {
-      "id": "log_1781278022323_ys1ey",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.09,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:02.323Z"
-    },
-    {
-      "id": "log_1781278024326_2uylb",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.11,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:04.326Z"
-    },
-    {
-      "id": "log_1781278026323_oh3hs",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.09,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:06.323Z"
-    },
-    {
-      "id": "log_1781278028324_6ojhx",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:08.324Z"
-    },
-    {
-      "id": "log_1781278030324_uxaz0",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.07,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:10.324Z"
-    },
-    {
-      "id": "log_1781278032324_rjgw3",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.1,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:12.324Z"
-    },
-    {
-      "id": "log_1781278034324_b32v0",
-      "api_type": "REST",
-      "endpoint": "/api/notifications",
-      "method": "GET",
-      "response_time_ms": 0.06,
-      "status_code": 200,
-      "payload_size_bytes": 2355,
-      "created_at": "2026-06-12T15:27:14.324Z"
-    },
-    {
       "id": "log_1781278036325_cyp95",
       "api_type": "REST",
       "endpoint": "/api/notifications",
@@ -3521,6 +2801,726 @@
       "status_code": 200,
       "payload_size_bytes": 2355,
       "created_at": "2026-06-12T15:30:58.182Z"
+    },
+    {
+      "id": "log_1781278260178_yffpe",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:00.178Z"
+    },
+    {
+      "id": "log_1781278262177_he8dw",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:02.177Z"
+    },
+    {
+      "id": "log_1781278264178_33iyx",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:04.178Z"
+    },
+    {
+      "id": "log_1781278266181_7wv09",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:06.181Z"
+    },
+    {
+      "id": "log_1781278268181_b7ue6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.15,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:08.181Z"
+    },
+    {
+      "id": "log_1781278270179_1f8n7",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:10.179Z"
+    },
+    {
+      "id": "log_1781278272180_wfo0j",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:12.180Z"
+    },
+    {
+      "id": "log_1781278274179_vl96k",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:14.179Z"
+    },
+    {
+      "id": "log_1781278276180_b89f6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:16.180Z"
+    },
+    {
+      "id": "log_1781278277217_wdy3c",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.05,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:17.217Z"
+    },
+    {
+      "id": "log_1781278280179_sb5ql",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.26,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:20.179Z"
+    },
+    {
+      "id": "log_1781278282177_uojax",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:22.177Z"
+    },
+    {
+      "id": "log_1781278284176_5g2nn",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:24.176Z"
+    },
+    {
+      "id": "log_1781278286176_ig3kt",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:26.176Z"
+    },
+    {
+      "id": "log_1781278288184_hof51",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:28.184Z"
+    },
+    {
+      "id": "log_1781278290179_7za7o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.41,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:30.179Z"
+    },
+    {
+      "id": "log_1781278292190_qmiyw",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 5.73,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:32.190Z"
+    },
+    {
+      "id": "log_1781278294178_asg2c",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:34.178Z"
+    },
+    {
+      "id": "log_1781278296179_ymzmk",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:36.179Z"
+    },
+    {
+      "id": "log_1781278298179_u461u",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:38.179Z"
+    },
+    {
+      "id": "log_1781278300178_btm8f",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:40.178Z"
+    },
+    {
+      "id": "log_1781278302177_aophw",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:42.177Z"
+    },
+    {
+      "id": "log_1781278304178_w4pyl",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:44.178Z"
+    },
+    {
+      "id": "log_1781278306176_hn05y",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:46.176Z"
+    },
+    {
+      "id": "log_1781278308178_cva9q",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.19,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:48.178Z"
+    },
+    {
+      "id": "log_1781278310178_dx9eq",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.16,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:50.178Z"
+    },
+    {
+      "id": "log_1781278312177_ilrtu",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.27,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:52.177Z"
+    },
+    {
+      "id": "log_1781278314176_59v7v",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.16,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:54.176Z"
+    },
+    {
+      "id": "log_1781278316179_bt68v",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:56.179Z"
+    },
+    {
+      "id": "log_1781278318179_trt40",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.14,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:31:58.179Z"
+    },
+    {
+      "id": "log_1781278320178_jzsfj",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:00.178Z"
+    },
+    {
+      "id": "log_1781278322179_zks6o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:02.179Z"
+    },
+    {
+      "id": "log_1781278324177_egsjh",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:04.177Z"
+    },
+    {
+      "id": "log_1781278326177_tmyr2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:06.177Z"
+    },
+    {
+      "id": "log_1781278328178_s7iow",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:08.178Z"
+    },
+    {
+      "id": "log_1781278330178_v8teq",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:10.178Z"
+    },
+    {
+      "id": "log_1781278332175_zvmrs",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:12.175Z"
+    },
+    {
+      "id": "log_1781278334175_v6sf0",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.03,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:14.175Z"
+    },
+    {
+      "id": "log_1781278336178_hcmbp",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:16.178Z"
+    },
+    {
+      "id": "log_1781278338176_ewngz",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:18.176Z"
+    },
+    {
+      "id": "log_1781278352193_8xrzs",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.17,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:32.193Z"
+    },
+    {
+      "id": "log_1781278361830_l8ish",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 1.16,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:41.830Z"
+    },
+    {
+      "id": "log_1781278363215_mdnch",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:43.215Z"
+    },
+    {
+      "id": "log_1781278366175_rlo78",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.04,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:46.175Z"
+    },
+    {
+      "id": "log_1781278368177_ig596",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:48.177Z"
+    },
+    {
+      "id": "log_1781278370176_aodhn",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:50.176Z"
+    },
+    {
+      "id": "log_1781278372179_s9tul",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:52.179Z"
+    },
+    {
+      "id": "log_1781278374178_sdrre",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.18,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:54.178Z"
+    },
+    {
+      "id": "log_1781278376178_6c9zw",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:56.178Z"
+    },
+    {
+      "id": "log_1781278378176_llvo5",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:32:58.176Z"
+    },
+    {
+      "id": "log_1781278380177_p9ira",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:00.177Z"
+    },
+    {
+      "id": "log_1781278382177_blq33",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:02.177Z"
+    },
+    {
+      "id": "log_1781278384174_nfhce",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:04.174Z"
+    },
+    {
+      "id": "log_1781278386178_ilm7o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.14,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:06.178Z"
+    },
+    {
+      "id": "log_1781278388177_reqjx",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:08.177Z"
+    },
+    {
+      "id": "log_1781278390177_hanfz",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:10.177Z"
+    },
+    {
+      "id": "log_1781278392177_42fak",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:12.177Z"
+    },
+    {
+      "id": "log_1781278394176_o08z2",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.06,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:14.176Z"
+    },
+    {
+      "id": "log_1781278396177_bbjsw",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:16.177Z"
+    },
+    {
+      "id": "log_1781278398177_tlale",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.14,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:18.177Z"
+    },
+    {
+      "id": "log_1781278400177_n0xsi",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:20.177Z"
+    },
+    {
+      "id": "log_1781278402177_jlmh8",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.1,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:22.177Z"
+    },
+    {
+      "id": "log_1781278404177_fw3zc",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:24.177Z"
+    },
+    {
+      "id": "log_1781278406176_ht3dl",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:26.176Z"
+    },
+    {
+      "id": "log_1781278408178_s9jbx",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.11,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:28.178Z"
+    },
+    {
+      "id": "log_1781278410176_1w5cy",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:30.176Z"
+    },
+    {
+      "id": "log_1781278412181_zxis8",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.07,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:32.181Z"
+    },
+    {
+      "id": "log_1781278414178_m8u4o",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.13,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:34.178Z"
+    },
+    {
+      "id": "log_1781278416177_22vmc",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.12,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:36.177Z"
+    },
+    {
+      "id": "log_1781278418177_lgein",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:38.177Z"
+    },
+    {
+      "id": "log_1781278420176_j9xm6",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.09,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:40.176Z"
+    },
+    {
+      "id": "log_1781278422176_czfe4",
+      "api_type": "REST",
+      "endpoint": "/api/notifications",
+      "method": "GET",
+      "response_time_ms": 0.08,
+      "status_code": 200,
+      "payload_size_bytes": 2355,
+      "created_at": "2026-06-12T15:33:42.176Z"
     }
   ]
 }
