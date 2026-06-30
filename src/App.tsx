@@ -1338,7 +1338,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
                             name: e.target.value,
                           }))
                         }
-                        placeholder="Contoh: Kevin Yulian Pamungkas"
+                        placeholder="Contoh: John Doe"
                         className="w-full px-4 py-2 text-sm rounded-xl border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-sky-400 transition-all"
                       />
                     </div>
@@ -3787,7 +3787,7 @@ WSO2 ESB bertindak sebagai middleware integrasi yang tangguh dengan memproses tr
           <div className="text-[10px] text-slate-400 text-right">
             <p>Universitas Esa Unggul - Fakultas Ilmu Komputer</p>
             <p className="mt-0.5">
-              &copy; 2026 Kevin Yulian Pamungkas. All Rights Reserved
+              &copy; 2026 Kelompok 9. All Rights Reserved
             </p>
           </div>
         </div>
